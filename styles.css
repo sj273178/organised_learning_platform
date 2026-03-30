@@ -30,3 +30,22 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.primary-button {
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+.primary-button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
