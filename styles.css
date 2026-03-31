@@ -48,4 +48,41 @@ body {
   color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
+}nav {
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+}
+
+nav .logo span {
+  font-size: 50px;
+  margin-right: 5px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 700;
+}
+nav ul a {
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+nav ul a:hover {
+  color: var(--secondary-color);
+}
+
