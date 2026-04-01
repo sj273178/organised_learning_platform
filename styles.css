@@ -1,8 +1,8 @@
 :root {
   --base-color: #000000;
+  --base-color-light: #424242;
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
-  --text-color: #333333;
   --gradient-color: linear-gradient(45deg, #3498db, #2ecc71);
 }
 
@@ -20,7 +20,7 @@ body {
     -apple-system,
     sans-serif;
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--base-color-light);
   line-height: 1.7;
   min-height: 100vh;
 }
@@ -38,7 +38,7 @@ a {
 /* BUTTONS BY ESTHER */
 
 .primary-button {
-  background-color: black;
+  background-color: var(--base-color);
   color: #fff;
   padding: 10px 30px;
   border-radius: 30px;
