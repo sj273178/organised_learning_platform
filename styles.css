@@ -489,8 +489,7 @@ nav ul a:hover {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 25px;
 }
 
 .lectures_h1 {
@@ -573,66 +572,21 @@ nav ul a:hover {
 }
 
 .lecture_btn {
-  background-color: #111;
-  color: #fff;
   padding: 8px 20px;
   border-radius: 30px;
   font-weight: 500;
-  font-size: 12px;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
-}
-
-.btn_outline {
-  border: 1.5px solid rgba(158, 155, 155, 0.55);
-  background-color: ffff;
-  color: black;
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-weight: 500;
-  font-size: 12px;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
+  font-size: 10px;
 }
 
 /* SMOOTH TRANSITIONS */
-.lecture_card,
-.lecture_btn {
+.lecture_card {
   transition: all 0.25s ease;
 }
 
 /* CARD HOVER EFFECT */
 .lecture_card:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-/* OPTIONAL: Slight glow feel */
-.lecture_card:hover {
+  transform: translateX(4px);
   background: #f9fafb;
-}
-
-/* BUTTON HOVER */
-.lecture_btn:hover {
-  background-color: #222;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.btn_outline:hover {
-  /* background-color: #222; */
-  transform: translateY(-2px);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-}
-
-/* BUTTON CLICK (ACTIVE STATE) */
-.lecture_btn:active {
-  transform: translateY(0px) scale(0.97);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
@@ -645,3 +599,4 @@ nav ul a:hover {
     grid-template-columns: 1fr;
   }
 }
+
