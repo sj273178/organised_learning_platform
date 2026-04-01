@@ -366,3 +366,134 @@ nav ul a:hover {
 
 @media (max-width: 480px) and (orientation: portrait) {
 }
+
+/* lecture section styles */
+.lecturers_section {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.lectures_h1 {
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+/* CARD BASE */
+.lecture_card {
+  background: #ffffff;
+  color: #000;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.lecture_card:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* CALENDAR */
+.calendar {
+  min-height: 220px;
+}
+
+.calendar h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.calendar-grid div {
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.highlighted_date {
+  background: #10b981;
+  color: #fff;
+}
+
+/* RIGHT SIDE */
+.lectures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.lecture-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lecture-time {
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.lecture_btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #10b981;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* SMOOTH TRANSITIONS */
+.lecture_card,
+.lecture_btn {
+  transition: all 0.25s ease;
+}
+
+/* CARD HOVER EFFECT */
+.lecture_card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* OPTIONAL: Slight glow feel */
+.lecture_card:hover {
+  background: #f9fafb;
+}
+
+/* BUTTON HOVER */
+.lecture_btn:hover {
+  background: #059669; /* slightly darker green */
+  box-shadow: 0 6px 12px rgba(16,185,129,0.4);
+}
+
+/* BUTTON CLICK (ACTIVE STATE) */
+.lecture_btn:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lectures {
+    grid-template-columns: 1fr;
+  }
+}
