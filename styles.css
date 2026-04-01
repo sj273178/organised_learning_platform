@@ -254,35 +254,6 @@ nav ul a:hover {
     flex-wrap: wrap;
    }
 
-.hero-btn-primary { 
-  background-color: #111; 
-  color: #fff; 
-  padding: 14px 32px;
-   border-radius: 30px;
-    font-weight: 700; 
-    font-size: 15px; 
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-   } 
-   .hero-btn-primary:hover {
-     background-color: #222; 
-     transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-     }
-
-.hero-btn-outline { 
-  border: 1.5px solid rgba(255, 255, 255, 0.55);
-   color: #fff;
-    padding: 13px 32px;
-     border-radius: 30px;
-      font-weight: 600;
-       font-size: 15px; 
-       transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
-       } 
-       .hero-btn-outline:hover {
-         border-color: rgba(255, 255, 255, 0.9);
-          background: rgba(255, 255, 255, 0.06);
-           transform: translateY(-2px);
-           }
 
 .hero-right { 
   flex: 0 0 420px;
