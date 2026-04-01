@@ -386,6 +386,9 @@ nav ul a:hover {
 
 /* Laptops / Small Desktops */
 @media (max-width: 1279px) {
+  nav ul {
+    gap: 20px 15px;
+  }
 }
 
 /* Tablets (Landscape) */
@@ -425,6 +428,7 @@ nav ul a:hover {
     flex-direction: column;
     width: 100%;
     z-index: 400;
+    gap: 10px;
     border-radius: 0 0 20px 20px;
   }
   #menu-toggle:checked ~ ul {
@@ -439,11 +443,27 @@ nav ul a:hover {
     color: #fff;
     width: 100%;
     display: block;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    margin-left: 15px;
   }
   nav ul .primary-button {
+    margin-left: 15px;
+    padding-left: 15px;
+  }
+  nav ul .primary-button,
+  nav ul a {
     width: 90%;
     max-width: 300px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+  }
+  nav ul a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    width: 90%;
   }
 }
 
