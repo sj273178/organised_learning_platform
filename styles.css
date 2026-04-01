@@ -72,15 +72,15 @@ nav .container {
   align-items: center;
 }
 nav .logo {
-  font-size: 24px;
-  font-weight: 900;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--base-color);
   display: flex;
   align-items: center;
 }
 
 nav .logo span {
-  font-size: 50px;
+  font-size: 40px;
   margin-right: 5px;
   font-weight: 900;
 }
@@ -158,11 +158,11 @@ nav ul a:hover {
 .hero {
   background: linear-gradient(
     135deg,
-    #0d1b2a 0%,
-    #0f2040 25%,
-    #1a1035 55%,
-    #2d1b4e 80%,
-    #1a2e1a 100%
+    #0a1520 0%,
+    #010816 25%,
+    #020007 55%,
+    #0c0714 80%,
+    #000000 100%
   );
   min-height: 100dvh;
   display: flex;
@@ -182,7 +182,7 @@ nav ul a:hover {
   height: 400px;
   background: radial-gradient(
     circle,
-    rgba(100, 60, 180, 0.25) 0%,
+    rgba(0, 8, 1, 0.89) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -196,7 +196,7 @@ nav ul a:hover {
   height: 300px;
   background: radial-gradient(
     circle,
-    rgba(30, 120, 80, 0.2) 0%,
+    rgba(0, 32, 18, 0.2) 0%,
     transparent 70%
   );
   pointer-events: none;
@@ -217,15 +217,16 @@ nav ul a:hover {
 .hero-left {
   flex: 1;
   max-width: 560px;
+  max-height: 50  0px;
 }
 
 .hero-badge {
   display: inline-block;
   border: 1px solid rgba(52, 211, 153, 0.5);
   color: rgba(52, 211, 153, 0.9);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
-  padding: 8px 18px;
+  padding: 10px 18px;
   border-radius: 30px;
   margin-bottom: 28px;
   background: rgba(52, 211, 153, 0.07);
@@ -234,17 +235,18 @@ nav ul a:hover {
 
 .hero-title {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 24px;
+  font-size: 45px;
 }
 
 .hero-gradient-text {
-  background: linear-gradient(90deg, #3ecfcf 0%, #a78bfa 100%);
+  background: linear-gradient(90deg, #3ecfcf 0%, #3ffa9c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background-clip: text;    
 }
 
 .hero-description {
@@ -302,7 +304,7 @@ nav ul a:hover {
   flex: 0 0 420px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .hero-card {
@@ -320,6 +322,7 @@ nav ul a:hover {
   transition:
     transform 0.2s ease,
     background 0.2s ease;
+    height: 85px;
 }
 .hero-card:hover {
   transform: translateX(4px);
@@ -613,4 +616,99 @@ nav ul a:hover {
   .lectures {
     grid-template-columns: 1fr;
   }
+}
+
+/*css for both pages - kuboi isaac*/
+
+.auth-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #0a1520 0%,
+    #010816 25%,
+    #020007 55%,
+    #0c0714 80%,
+    #000000 100%
+  );
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 30px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.auth-card h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.auth-card p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: rgba(255,255,255,0.6);
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.form-group input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: #2ecc71;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.auth-footer a {
+  color: #3ffa9c;
 }
