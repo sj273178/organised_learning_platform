@@ -3,7 +3,7 @@
   --base-color-light: #424242;
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
-  --gradient-color: linear-gradient(45deg, #3498db, #2ecc71);
+  --gradient-color: linear-gradient(45deg, #3498db, #1abc9c, #2ecc71);
 }
 
 * {
@@ -19,7 +19,6 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
-  background-color: var(--bg);
   color: var(--base-color-light);
   line-height: 1.7;
   min-height: 100vh;
@@ -44,11 +43,7 @@ a {
   border-radius: 30px;
   position: relative;
   display: inline-block;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .primary-button:hover {
   background-color: var(--secondary-color);
