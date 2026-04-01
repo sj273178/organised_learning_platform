@@ -523,8 +523,15 @@ nav ul a:hover {
 }
 
 .highlighted_date {
-  background: #10b981;
-  color: #fff;
+  display: inline-block;
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  color: rgba(52, 211, 153, 0.9);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(52, 211, 153, 0.07);
+  letter-spacing: 0.02em;
 }
 
 /* RIGHT SIDE */
@@ -546,13 +553,30 @@ nav ul a:hover {
 }
 
 .lecture_btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #10b981;
+  background-color: #111;
   color: #fff;
-  border-radius: 20px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
   font-size: 12px;
-  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn_outline {
+  border: 1.5px solid rgba(158, 155, 155, 0.55);
+  background-color: ffff;
+  color: black;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 12px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 
 /* SMOOTH TRANSITIONS */
@@ -574,8 +598,15 @@ nav ul a:hover {
 
 /* BUTTON HOVER */
 .lecture_btn:hover {
-  background: #059669; /* slightly darker green */
-  box-shadow: 0 6px 12px rgba(16,185,129,0.4);
+  background-color: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn_outline:hover {
+  /* background-color: #222; */
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* BUTTON CLICK (ACTIVE STATE) */
