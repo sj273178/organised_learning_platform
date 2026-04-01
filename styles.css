@@ -1,6 +1,11 @@
-a {
-  text-decoration: none;
+:root {
+  --base-color: #000000;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333333;
+  --gradient-color: linear-gradient(45deg, #3498db, #2ecc71);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +13,6 @@ a {
   font-weight: 400;
 }
 
-:root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --text-color: #333333;
-  --gradient-color: linear-gradient(45deg, #3498db, #2ecc71);
-}
 body {
   font-family:
     "Segoe UI",
@@ -26,10 +25,17 @@ body {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
+
+/* BUTTONS BY ESTHER */
 
 .primary-button {
   background-color: black;
@@ -50,9 +56,14 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
+
+/* NAVBAR BY RUTH */
 nav {
-  padding: 20px;
+  height: 75px;
+  display: flex;
+  align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
 }
 nav .container {
   display: flex;
@@ -62,7 +73,7 @@ nav .container {
 nav .logo {
   font-size: 24px;
   font-weight: 900;
-  color: var(--primary-color);
+  color: var(--base-color);
   display: flex;
   align-items: center;
 }
@@ -70,6 +81,7 @@ nav .logo {
 nav .logo span {
   font-size: 50px;
   margin-right: 5px;
+  font-weight: 900;
 }
 
 nav ul {
@@ -80,13 +92,15 @@ nav ul {
   font-weight: 700;
 }
 nav ul a {
-  color: var(--primary-color);
-  font-weight: 500;
+  color: var(--base-color);
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 nav ul a:hover {
   color: var(--secondary-color);
 }
+
+/* HERO SECTION BY MOISHA */
 .hero {
   background: linear-gradient(
     135deg,
@@ -96,7 +110,7 @@ nav ul a:hover {
     #2d1b4e 80%,
     #1a2e1a 100%
   );
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 75px);
   display: flex;
   align-items: center;
   position: relative;
@@ -314,7 +328,13 @@ nav ul a:hover {
   line-height: 1.5;
   margin: 0;
 }
-@media (max-width: 900px) {
+
+/* Laptops / Small Desktops */
+@media (max-width: 1279px) {
+}
+
+/* Tablets (Landscape) */
+@media (max-width: 1023px) {
   .hero-container {
     flex-direction: column;
     text-align: center;
@@ -333,4 +353,21 @@ nav ul a:hover {
     width: 100%;
     max-width: 480px;
   }
+}
+
+/* Tablets (Portrait) */
+@media (max-width: 767px) {
+}
+
+/* Mobile (Landscape) */
+@media (max-width: 932px) and (orientation: landscape) {
+}
+
+/* Small (sm): 640px and down */
+@media (max-width: 639px) {
+}
+
+/* Mobile (Portrait) */
+
+@media (max-width: 480px) and (orientation: portrait) {
 }
