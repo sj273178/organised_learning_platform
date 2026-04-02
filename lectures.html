@@ -1,0 +1,1282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse lectures and course materials – Organised Learning Platform"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Lectures – Organised Learning Platform</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">
+          <span class="material-symbols-outlined">local_library</span>
+          Organised Learning Platform
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <div class="mobile-menu">
+          <label for="menu-toggle" class="menu">
+            <span></span>
+          </label>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/lectures.html">Lectures</a></li>
+          <li><a href="/results.html">Results</a></li>
+          <li><a href="/communication.html">Communication</a></li>
+          <li><a class="primary-button" href="/login.html">Login</a></li>
+          <li><a class="primary-button" href="/register.html">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========== SECTION 1: COURSE NAVIGATION ========== -->
+    <section class="lectures-hero">
+      <div class="container">
+        <div class="lectures-hero-content">
+          <span class="lectures-hero-badge">Academic Year 2025/2026</span>
+          <h1>
+            <span class="material-symbols-outlined">menu_book</span>
+            Lecture Materials
+          </h1>
+          <p>
+            Browse all course content organised by year, semester, and unit.
+            Select a course below to get started.
+          </p>
+
+          <!-- Course navigation buttons -->
+          <div class="course-nav">
+            <a href="#" class="course-nav-btn course-nav-btn--active">
+              <span class="material-symbols-outlined">code</span>
+              Computer Science
+            </a>
+            <a href="#" class="course-nav-btn">
+              <span class="material-symbols-outlined">calculate</span>
+              Mathematics
+            </a>
+            <a href="#" class="course-nav-btn">
+              <span class="material-symbols-outlined">business_center</span>
+              Business
+            </a>
+            <a href="#" class="course-nav-btn">
+              <span class="material-symbols-outlined">gavel</span>
+              Law
+            </a>
+            <a href="#" class="course-nav-btn">
+              <span class="material-symbols-outlined">network_check</span>
+              Networking
+            </a>
+            <a href="#" class="course-nav-btn">
+              <span class="material-symbols-outlined">psychology</span>
+              General Studies
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 2: YEAR CARDS ========== -->
+    <section class="lectures-years">
+      <div class="container">
+        <h2 class="section-heading">Select Academic Year</h2>
+        <div class="year-cards">
+          <a href="#year1" class="year-card year-card--blue">
+            <span class="material-symbols-outlined">looks_one</span>
+            <div>
+              <h3>Year 1</h3>
+              <p>2 Semesters &bull; 14 Units</p>
+            </div>
+            <span class="material-symbols-outlined year-arrow">
+              arrow_forward
+            </span>
+          </a>
+          <a href="#year2" class="year-card year-card--green">
+            <span class="material-symbols-outlined">looks_two</span>
+            <div>
+              <h3>Year 2</h3>
+              <p>2 Semesters &bull; 14 Units</p>
+            </div>
+            <span class="material-symbols-outlined year-arrow">
+              arrow_forward
+            </span>
+          </a>
+          <a href="#year3" class="year-card year-card--purple">
+            <span class="material-symbols-outlined">looks_3</span>
+            <div>
+              <h3>Year 3</h3>
+              <p>2 Semesters &bull; 13 Units</p>
+            </div>
+            <span class="material-symbols-outlined year-arrow">
+              arrow_forward
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SECTION 3: SEMESTERS & COURSE UNITS ========== -->
+    <section class="lectures-content">
+      <div class="container">
+        <!-- ===== YEAR 1 ===== -->
+        <div class="year-block" id="year1">
+          <div class="year-block-header year-block-header--blue">
+            <span class="material-symbols-outlined">school</span>
+            <h2>Year 1</h2>
+          </div>
+
+          <!-- Semester 1 -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 1
+              <span class="semester-date">Sept 2023 – Jan 2024</span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1101</span>
+                  <h4>Introduction to Computing</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      12 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1102</span>
+                  <h4>Programming Fundamentals</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      15 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">MTH 1101</span>
+                  <h4>Calculus I</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      12 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">ENG 1101</span>
+                  <h4>Communication Skills</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      8 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      6 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1103</span>
+                  <h4>Computer Architecture</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      11 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      9 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">PHY 1101</span>
+                  <h4>Physics for Computing</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      9 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      7 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1104</span>
+                  <h4>Digital Logic</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 2 -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 2
+              <span class="semester-date">Feb 2024 – Jun 2024</span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1201</span>
+                  <h4>Object-Oriented Programming</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      14 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      11 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1202</span>
+                  <h4>Web Development Basics</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      16 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      12 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">MTH 1201</span>
+                  <h4>Calculus II</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      9 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1203</span>
+                  <h4>Operating Systems</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      12 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1204</span>
+                  <h4>Intro to Databases</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      11 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">STA 1201</span>
+                  <h4>Probability &amp; Statistics</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      9 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      7 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 1205</span>
+                  <h4>Computer Ethics</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      6 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      5 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== YEAR 2 ===== -->
+        <div class="year-block" id="year2">
+          <div class="year-block-header year-block-header--green">
+            <span class="material-symbols-outlined">school</span>
+            <h2>Year 2</h2>
+          </div>
+
+          <!-- Semester 1 -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 1
+              <span class="semester-date">Sept 2024 – Jan 2025</span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2101</span>
+                  <h4>Web Design &amp; Internet</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      14 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2102</span>
+                  <h4>Data Structures &amp; Algorithms</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      16 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      14 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2103</span>
+                  <h4>Database Management Systems</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      12 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      11 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2104</span>
+                  <h4>Software Engineering</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      13 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2105</span>
+                  <h4>Computer Networks</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      11 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      9 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">MTH 2201</span>
+                  <h4>Discrete Mathematics</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      12 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2106</span>
+                  <h4>Systems Analysis &amp; Design</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 2 -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 2
+              <span class="semester-date">Feb 2025 – Jun 2025</span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2201</span>
+                  <h4>Mobile App Development</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      15 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2202</span>
+                  <h4>Artificial Intelligence</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      14 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      12 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2203</span>
+                  <h4>Information Security</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      12 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      9 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2204</span>
+                  <h4>Cloud Computing</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      11 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2205</span>
+                  <h4>Human Computer Interaction</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      9 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      7 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">MGT 2201</span>
+                  <h4>IT Project Management</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      8 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      6 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2206</span>
+                  <h4>Compiler Design</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== YEAR 3 ===== -->
+        <div class="year-block" id="year3">
+          <div class="year-block-header year-block-header--purple">
+            <span class="material-symbols-outlined">school</span>
+            <h2>Year 3</h2>
+          </div>
+
+          <!-- Semester 1 -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 1
+              <span class="semester-date">Sept 2025 – Jan 2026</span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3101</span>
+                  <h4>Machine Learning</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      16 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      14 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3102</span>
+                  <h4>Distributed Systems</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      12 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      10 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3103</span>
+                  <h4>Advanced Databases</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      13 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      11 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3104</span>
+                  <h4>Embedded Systems</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3105</span>
+                  <h4>Research Methods</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      8 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      6 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3106</span>
+                  <h4>Quantum Computing Intro</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      11 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      9 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 2206</span>
+                  <h4>Compiler Design (Retake)</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      10 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      8 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Semester 2 (Current) -->
+          <div class="semester-block">
+            <h3 class="semester-title">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Semester 2
+              <span class="semester-date semester-date--current">
+                Feb 2026 – Jun 2026 (Current)
+              </span>
+            </h3>
+            <div class="unit-grid">
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3201</span>
+                  <h4>Final Year Project I</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Natukunda Grace
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      4 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      3 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--green"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3202</span>
+                  <h4>DevOps &amp; CI/CD</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Mugisha Allan
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      6 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      5 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--purple"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3203</span>
+                  <h4>Cybersecurity</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Tumwine Deo
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      5 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      4 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--orange"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3204</span>
+                  <h4>Data Science &amp; Visualization</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Mr. Okello James
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      5 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      4 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--teal"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3205</span>
+                  <h4>Professional Ethics in IT</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Dr. Ssemanda Paul
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      3 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      2 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+
+              <div class="unit-card">
+                <div class="unit-card-accent unit-card-accent--blue"></div>
+                <div class="unit-card-body">
+                  <span class="unit-code">CSC 3206</span>
+                  <h4>Internet of Things</h4>
+                  <p class="unit-instructor">
+                    <span class="material-symbols-outlined">person</span>
+                    Prof. Kabuye Sarah
+                  </p>
+                  <div class="unit-resources">
+                    <span>
+                      <span class="material-symbols-outlined">videocam</span>
+                      4 Videos
+                    </span>
+                    <span>
+                      <span class="material-symbols-outlined">description</span>
+                      3 Notes
+                    </span>
+                  </div>
+                  <a href="#" class="lecture-btn">
+                    <span class="material-symbols-outlined">folder_open</span>
+                    Open Materials
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View your academic results – Organised Learning Platform"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Results – Organised Learning Platform</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">
+          <span class="material-symbols-outlined">local_library</span>
+          Organised Learning Platform
+        </a>
+        <input type="checkbox" id="menu-toggle" />
+        <div class="mobile-menu">
+          <label for="menu-toggle" class="menu">
+            <span></span>
+          </label>
+        </div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/lectures.html">Lectures</a></li>
+          <li><a href="/results.html">Results</a></li>
+          <li><a href="/communication.html">Communication</a></li>
+          <li><a class="primary-button" href="/login.html">Login</a></li>
+          <li><a class="primary-button" href="/register.html">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="results-section">
+      <!-- Page header -->
+      <div class="results-hero">
+        <div class="container">
+          <h1>
+            <span class="material-symbols-outlined">school</span>
+            Academic Results
+          </h1>
+          <p>Track your grades, GPA, and academic progress all in one place.</p>
+        </div>
+      </div>
+
+      <div class="results-content container">
+        <!-- Summary cards row -->
+        <div class="results-summary">
+          <div class="summary-card">
+            <span
+              class="material-symbols-outlined summary-icon summary-icon--blue"
+            >
+              emoji_events
+            </span>
+            <div>
+              <h3>4.02</h3>
+              <p>Cumulative GPA</p>
+            </div>
+          </div>
+          <div class="summary-card">
+            <span
+              class="material-symbols-outlined summary-icon summary-icon--green"
+            >
+              check_circle
+            </span>
+            <div>
+              <h3>38 / 42</h3>
+              <p>Courses Passed</p>
+            </div>
+          </div>
+          <div class="summary-card">
+            <span
+              class="material-symbols-outlined summary-icon summary-icon--purple"
+            >
+              trending_up
+            </span>
+            <div>
+              <h3>A-</h3>
+              <p>Average Grade</p>
+            </div>
+          </div>
+          <div class="summary-card">
+            <span
+              class="material-symbols-outlined summary-icon summary-icon--orange"
+            >
+              schedule
+            </span>
+            <div>
+              <h3>Year 3</h3>
+              <p>Semester 2</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Semester heading -->
+        <h2 class="section-heading">Semester Results</h2>
+
+        <!-- 6 Semester Cards Grid -->
+        <div class="semester-grid">
+          <!-- Year 1 Semester 1 -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--blue">
+              <div>
+                <h3>Year 1 – Semester 1</h3>
+                <p>Sept 2023 – Jan 2024</p>
+              </div>
+              <span class="semester-gpa">GPA: 3.80</span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1101</strong>
+                  <span>Intro to Computing</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1102</strong>
+                  <span>Programming Fundamentals</span>
+                </div>
+                <span class="grade grade--a">A-</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>MTH 1101</strong>
+                  <span>Calculus I</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>ENG 1101</strong>
+                  <span>Communication Skills</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1103</strong>
+                  <span>Computer Architecture</span>
+                </div>
+                <span class="grade grade--b">B</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>PHY 1101</strong>
+                  <span>Physics for Computing</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1104</strong>
+                  <span>Digital Logic</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 24</span>
+              <span>7 Courses</span>
+              <span class="status status--pass">All Passed</span>
+            </div>
+          </div>
+
+          <!-- Year 1 Semester 2 -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--green">
+              <div>
+                <h3>Year 1 – Semester 2</h3>
+                <p>Feb 2024 – Jun 2024</p>
+              </div>
+              <span class="semester-gpa">GPA: 3.95</span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1201</strong>
+                  <span>Object-Oriented Programming</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1202</strong>
+                  <span>Web Development Basics</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>MTH 1201</strong>
+                  <span>Calculus II</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1203</strong>
+                  <span>Operating Systems</span>
+                </div>
+                <span class="grade grade--a">A-</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1204</strong>
+                  <span>Intro to Databases</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>STA 1201</strong>
+                  <span>Probability &amp; Statistics</span>
+                </div>
+                <span class="grade grade--b">B</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 1205</strong>
+                  <span>Computer Ethics</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 24</span>
+              <span>7 Courses</span>
+              <span class="status status--pass">All Passed</span>
+            </div>
+          </div>
+
+          <!-- Year 2 Semester 1 -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--purple">
+              <div>
+                <h3>Year 2 – Semester 1</h3>
+                <p>Sept 2024 – Jan 2025</p>
+              </div>
+              <span class="semester-gpa">GPA: 4.10</span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2101</strong>
+                  <span>Web Design &amp; Internet</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2102</strong>
+                  <span>Data Structures &amp; Algorithms</span>
+                </div>
+                <span class="grade grade--a">A-</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2103</strong>
+                  <span>Database Management Systems</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2104</strong>
+                  <span>Software Engineering</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2105</strong>
+                  <span>Computer Networks</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>MTH 2201</strong>
+                  <span>Discrete Mathematics</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2106</strong>
+                  <span>Systems Analysis &amp; Design</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 24</span>
+              <span>7 Courses</span>
+              <span class="status status--pass">All Passed</span>
+            </div>
+          </div>
+
+          <!-- Year 2 Semester 2 -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--orange">
+              <div>
+                <h3>Year 2 – Semester 2</h3>
+                <p>Feb 2025 – Jun 2025</p>
+              </div>
+              <span class="semester-gpa">GPA: 3.70</span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2201</strong>
+                  <span>Mobile App Development</span>
+                </div>
+                <span class="grade grade--a">A-</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2202</strong>
+                  <span>Artificial Intelligence</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2203</strong>
+                  <span>Information Security</span>
+                </div>
+                <span class="grade grade--b">B</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2204</strong>
+                  <span>Cloud Computing</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2205</strong>
+                  <span>Human Computer Interaction</span>
+                </div>
+                <span class="grade grade--c">C+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>MGT 2201</strong>
+                  <span>IT Project Management</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2206</strong>
+                  <span>Compiler Design</span>
+                </div>
+                <span class="grade grade--f">F</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 24</span>
+              <span>7 Courses</span>
+              <span class="status status--fail">1 Retake</span>
+            </div>
+          </div>
+
+          <!-- Year 3 Semester 1 -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--blue">
+              <div>
+                <h3>Year 3 – Semester 1</h3>
+                <p>Sept 2025 – Jan 2026</p>
+              </div>
+              <span class="semester-gpa">GPA: 4.20</span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3101</strong>
+                  <span>Machine Learning</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3102</strong>
+                  <span>Distributed Systems</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3103</strong>
+                  <span>Advanced Databases</span>
+                </div>
+                <span class="grade grade--a">A-</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3104</strong>
+                  <span>Embedded Systems</span>
+                </div>
+                <span class="grade grade--b">B+</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3105</strong>
+                  <span>Research Methods</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3106</strong>
+                  <span>Quantum Computing Intro</span>
+                </div>
+                <span class="grade grade--a">A</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 2206</strong>
+                  <span>Compiler Design (Retake)</span>
+                </div>
+                <span class="grade grade--b">B</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 24</span>
+              <span>7 Courses</span>
+              <span class="status status--pass">All Passed</span>
+            </div>
+          </div>
+
+          <!-- Year 3 Semester 2 (Current) -->
+          <div class="semester-card">
+            <div class="semester-card-header semester-card-header--green">
+              <div>
+                <h3>Year 3 – Semester 2</h3>
+                <p>Feb 2026 – Jun 2026</p>
+              </div>
+              <span class="semester-gpa semester-gpa--pending">
+                In Progress
+              </span>
+            </div>
+            <ul class="semester-courses">
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3201</strong>
+                  <span>Final Year Project I</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3202</strong>
+                  <span>DevOps &amp; CI/CD</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3203</strong>
+                  <span>Cybersecurity</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3204</strong>
+                  <span>Data Science &amp; Visualization</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3205</strong>
+                  <span>Professional Ethics in IT</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+              <li>
+                <div class="course-info">
+                  <strong>CSC 3206</strong>
+                  <span>Internet of Things</span>
+                </div>
+                <span class="grade grade--pending">–</span>
+              </li>
+            </ul>
+            <div class="semester-card-footer">
+              <span>Credits: 21</span>
+              <span>6 Courses</span>
+              <span class="status status--pending">Ongoing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Print button -->
+        <div class="results-actions">
+          <button class="auth-btn" onclick="window.print()">
+            <span class="material-symbols-outlined">print</span>
+            Print Results
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
