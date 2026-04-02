@@ -455,8 +455,7 @@ nav ul a:hover {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 25px;
 }
 
 .lectures_h1 {
@@ -509,8 +508,15 @@ nav ul a:hover {
 }
 
 .highlighted_date {
-  background: #10b981;
-  color: #fff;
+  display: inline-block;
+  border: 1px solid rgba(52, 211, 153, 0.5);
+  color: rgba(52, 211, 153, 0.9);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(52, 211, 153, 0.07);
+  letter-spacing: 0.02em;
 }
 
 /* RIGHT SIDE */
@@ -532,42 +538,21 @@ nav ul a:hover {
 }
 
 .lecture_btn {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #10b981;
-  color: #fff;
-  border-radius: 20px;
-  font-size: 12px;
-  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 10px;
 }
 
 /* SMOOTH TRANSITIONS */
-.lecture_card,
-.lecture_btn {
+.lecture_card {
   transition: all 0.25s ease;
 }
 
 /* CARD HOVER EFFECT */
 .lecture_card:hover {
-  transform: translateY(-3px) scale(1.01);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-/* OPTIONAL: Slight glow feel */
-.lecture_card:hover {
+  transform: translateX(4px);
   background: #f9fafb;
-}
-
-/* BUTTON HOVER */
-.lecture_btn:hover {
-  background: #059669; /* slightly darker green */
-  box-shadow: 0 6px 12px rgba(16,185,129,0.4);
-}
-
-/* BUTTON CLICK (ACTIVE STATE) */
-.lecture_btn:active {
-  transform: translateY(0px) scale(0.97);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
@@ -580,3 +565,4 @@ nav ul a:hover {
     grid-template-columns: 1fr;
   }
 }
+
