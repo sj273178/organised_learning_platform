@@ -931,3 +931,122 @@ body.login-page::after {
     font-size: 22px;
   }
 }
+
+/* LECTURE HERO BUILT BY MILLY */
+.lectures-hero.hero {
+  padding-top: calc(60px + 20px);
+  min-height: auto;
+}
+
+.lectures-hero-content {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lectures-hero-content h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lectures-hero-content h1 span {
+  font-size: 50px;
+  margin-right: 5px;
+  font-weight: 900;
+}
+.lectures-hero-description {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.lectures-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+.lectures-hero-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lectures-hero-sub {
+  padding: 3rem 1rem;
+}
+
+.lectures-hero-sub h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--base-color);
+  text-transform: capitalize;
+}
+.lecture-hero-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.lectures-hero-sub article {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 60px 1fr 30px;
+  width: 100%;
+  max-width: 380px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lectures-hero-sub .lecture-hero-numbers {
+  height: 40px;
+  width: 40px;
+  border: 3px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.lectures-hero-sub article::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 10px 0 0 10px;
+}
+.lectures-hero-sub article:nth-child(2)::before {
+  background: var(--secondary-color);
+}
+
+.lectures-hero-sub h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--base-color);
+  text-transform: capitalize;
+}
+
+.lectures-hero-sub span {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
