@@ -769,6 +769,7 @@ body.login-page::after {
   color: var(--base-color-light);
   cursor: pointer;
   user-select: none;
+  flex-wrap: wrap;
 }
 
 .login-remember input[type="checkbox"] {
@@ -810,11 +811,12 @@ body.login-page::after {
 }
 
 .login-forgot {
+  display: flex;
   font-size: 13.5px;
   font-weight: 600;
   color: var(--primary-color);
   transition: color 0.2s ease;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .login-forgot:hover {
