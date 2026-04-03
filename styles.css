@@ -53,6 +53,21 @@ a {
   transform: translateY(-2px);
 }
 
+.outline-button {
+  background-color: var(--gradient-color);
+  color: rgba(47, 255, 179, 0.778);
+  padding: 10px 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.outline-button:hover {
+  color: rgba(var(--primary-color), 1);
+  border-color: rgba(var(--primary-color), 1);
+}
+
 /* NAVBAR BY RUTH */
 nav {
   height: 75px;
