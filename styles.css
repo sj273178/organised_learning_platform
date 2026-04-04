@@ -628,12 +628,13 @@ nav ul a:hover {
 body.login-page {
   background-color: var(--base-color);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body.login-page::before {
   background-color: rgba(52, 152, 219, 0.503);
   content: "";
-  position: absolute;
+  position: fixed;
   width: 600px;
   height: 600px;
   background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
@@ -641,10 +642,11 @@ body.login-page::before {
   right: -150px;
   border-radius: 50%;
   animation: float 8s ease-in-out infinite;
+  pointer-events: none;
 }
 body.login-page::after {
   content: "";
-  position: absolute;
+  position: fixed;
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
@@ -652,6 +654,7 @@ body.login-page::after {
   left: -100px;
   border-radius: 50%;
   animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
 }
 
 .login-section {
@@ -783,6 +786,7 @@ body.login-page::after {
   color: var(--base-color-light);
   cursor: pointer;
   user-select: none;
+  flex-wrap: wrap;
 }
 
 .login-remember input[type="checkbox"] {
@@ -824,11 +828,12 @@ body.login-page::after {
 }
 
 .login-forgot {
+  display: flex;
   font-size: 13.5px;
   font-weight: 600;
   color: var(--primary-color);
   transition: color 0.2s ease;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .login-forgot:hover {
