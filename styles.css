@@ -101,6 +101,7 @@ nav .logo span {
   font-size: 50px;
   margin-right: 5px;
   font-weight: 900;
+  color: var(--secondary-color);
 }
 
 nav ul {
@@ -469,11 +470,17 @@ nav ul a:hover {
     padding: 10px 15px;
     margin-left: 15px;
   }
-  nav ul .primary-button {
+  nav ul .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav ul .nav-buttons a {
     margin-left: 15px;
     padding-left: 15px;
+    background-color: var(--secondary-color);
   }
-  nav ul .primary-button,
+
   nav ul a {
     width: 90%;
     max-width: 300px;
@@ -481,6 +488,7 @@ nav ul a:hover {
     transition: all 0.3s ease;
     border-radius: 30px;
   }
+
   nav ul a:hover {
     background-color: var(--secondary-color);
     color: #fff;
@@ -505,6 +513,13 @@ nav ul a:hover {
 /* Mobile (Portrait) */
 
 @media (max-width: 480px) and (orientation: portrait) {
+  nav .logo {
+    font-size: 10px;
+  }
+  nav .logo span {
+    font-size: 39px;
+  }
+
 }
 
 /* lecture section styles */
