@@ -101,6 +101,7 @@ nav .logo span {
   font-size: 50px;
   margin-right: 5px;
   font-weight: 900;
+  color: var(--secondary-color);
 }
 
 nav ul {
@@ -512,6 +513,13 @@ nav ul a:hover {
 /* Mobile (Portrait) */
 
 @media (max-width: 480px) and (orientation: portrait) {
+  nav .logo {
+    font-size: 10px;
+  }
+  nav .logo span {
+    font-size: 39px;
+  }
+
 }
 
 /* lecture section styles */
