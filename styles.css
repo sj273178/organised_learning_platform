@@ -1095,3 +1095,27 @@ body.login-page::after {
 .comm-read-more .material-symbols-outlined {
   font-size: 16px;
 }
+
+/* Communication responsive */
+@media (max-width: 767px) {
+  .comm-hero {
+    min-height: 40vh;
+    padding: 60px 20px 40px;
+  }
+  .comm-card-body {
+    padding: 18px 20px;
+  }
+  .comm-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comm-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
