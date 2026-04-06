@@ -972,4 +972,212 @@ body.login-page::after {
   line-height: 1.7;
   max-width: 520px;
   margin: 0 auto;
+
+/* COMMUNICATION CARDS SECTION BY SUBAN */
+.comm-cards-section {
+  background: #f8f9fa;
+  padding: 60px 20px 80px;
+}
+
+.comm-cards-section .container {
+  display: grid;
+  gap: 24px;
+}
+
+/* Card base */
+.comm-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.comm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+
+.comm-card--urgent {
+  border: 1.5px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Accent bar at top of card */
+.comm-card-accent {
+  height: 4px;
+}
+
+.comm-card-accent--red {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+.comm-card-accent--blue {
+  background: linear-gradient(90deg, #3498db, #60a5fa);
+}
+.comm-card-accent--green {
+  background: linear-gradient(90deg, #2ecc71, #34d399);
+}
+.comm-card-accent--purple {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.comm-card-accent--orange {
+  background: linear-gradient(90deg, #e67e22, #f59e0b);
+}
+.comm-card-accent--teal {
+  background: linear-gradient(90deg, #1abc9c, #2dd4bf);
+}
+
+/* Card body */
+.comm-card-body {
+  padding: 24px 28px;
+}
+
+.comm-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+/* Tags */
+.comm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.comm-tag .material-symbols-outlined {
+  font-size: 15px;
+}
+
+.comm-tag--red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+.comm-tag--blue {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+.comm-tag--green {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+.comm-tag--purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+.comm-tag--orange {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
+}
+.comm-tag--teal {
+  background: rgba(26, 188, 156, 0.1);
+  color: #1abc9c;
+}
+
+.comm-date {
+  font-size: 12.5px;
+  color: #999;
+}
+
+/* Card content */
+.comm-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--base-color);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.comm-card-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Card footer */
+.comm-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.comm-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--base-color-light);
+}
+
+.comm-author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.comm-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: gap 0.25s ease;
+}
+
+.comm-read-more:hover {
+  gap: 8px;
+  color: var(--secondary-color);
+}
+
+.comm-read-more .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.material-icons {
+  font-size: 18px;
+  vertical-align: middle;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Communication responsive */
+@media (max-width: 767px) {
+  .comm-hero {
+    min-height: 40vh;
+    padding: 60px 20px 40px;
+  }
+  .comm-card-body {
+    padding: 18px 20px;
+  }
+  .comm-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comm-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }
