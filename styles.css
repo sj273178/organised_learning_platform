@@ -628,7 +628,7 @@ nav ul a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 768px)  {}
   .layout {
     grid-template-columns: 1fr;
   }
@@ -636,6 +636,238 @@ nav ul a:hover {
   .lectures {
     grid-template-columns: 1fr;
   }
+
+/* =================================
+   RESULTS SECTION BY SWABULAH
+================================= */
+
+/* PAGE FONT */
+
+body{
+font-family:'Inter',sans-serif;
+background:#f3f4f6;
+margin:0;
+padding:0;
+}
+
+
+/* HEADER */
+
+.results-header{
+background:linear-gradient(90deg,#0f172a,#1e1b4b,#065f46);
+color:white;
+text-align:center;
+padding:80px 20px;
+margin-top:75px;
+}
+
+.results-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+font-size:34px;
+font-weight:700;
+}
+
+.results-title i{
+font-size:28px;
+}
+
+.results-header p{
+margin-top:10px;
+opacity:0.85;
+font-size:15px;
+}
+
+
+/* SUMMARY CARDS */
+
+.results-summary{
+display:flex;
+gap:20px;
+justify-content:center;
+padding:30px;
+flex-wrap:wrap;
+margin-top:-40px;
+}
+
+.result-card{
+background:white;
+border-radius:16px;
+padding:20px;
+min-width:220px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.25s;
+}
+
+.result-card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.result-card i{
+font-size:22px;
+color:#2563eb;
+margin-bottom:8px;
+}
+
+.result-card h2{
+margin:5px 0;
+font-size:24px;
+font-weight:700;
+}
+
+.result-card span{
+font-size:14px;
+color:#777;
+}
+
+
+/* SECTION TITLE */
+
+.results-section-title{
+font-size:22px;
+font-weight:700;
+margin:30px 20px 10px;
+}
+
+
+/* SEMESTER CARDS CONTAINER */
+
+.results-semesters{
+display:flex;
+gap:25px;
+padding:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+
+/* SEMESTER CARD */
+
+.result-sem-card{
+width:320px;
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.result-sem-card:hover{
+transform:translateY(-5px);
+}
+
+
+/* SEMESTER HEADER */
+
+.result-sem-header{
+padding:18px;
+color:white;
+display:flex;
+justify-content:space-between;
+font-weight:600;
+font-size:15px;
+}
+
+.sem-blue{
+background:linear-gradient(135deg,#3b82f6,#38bdf8);
+}
+
+.sem-green{
+background:linear-gradient(135deg,#22c55e,#4ade80);
+}
+
+.sem-purple{
+background:linear-gradient(135deg,#9333ea,#c084fc);
+}
+
+
+/* COURSE ROW */
+
+.result-course{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 18px;
+border-bottom:1px solid #f1f1f1;
+}
+
+.result-course div{
+font-weight:600;
+}
+
+.result-course small{
+display:block;
+font-size:13px;
+color:#777;
+font-weight:400;
+}
+
+
+/* GRADE BADGES */
+
+.result-grade{
+padding:6px 12px;
+border-radius:10px;
+font-size:13px;
+font-weight:600;
+}
+
+.grade-a{
+background:#dcfce7;
+color:#15803d;
+}
+
+.grade-am{
+background:#e0f2fe;
+color:#0369a1;
+}
+
+.grade-bp{
+background:#dbeafe;
+color:#1d4ed8;
+}
+
+.grade-b{
+background:#e2e8f0;
+color:#334155;
+}
+
+
+/* FOOTER */
+
+.result-footer{
+display:flex;
+justify-content:space-between;
+padding:14px 18px;
+font-size:13px;
+color:#555;
+}
+
+.result-status{
+background:#dcfce7;
+color:#15803d;
+padding:5px 12px;
+border-radius:20px;
+font-weight:600;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.results-summary{
+flex-direction:column;
+align-items:center;
+}
+
+.results-semesters{
+flex-direction:column;
+align-items:center;
 }
 
 /* LOGIN PAGE — ROGERS */
