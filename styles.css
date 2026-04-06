@@ -23,6 +23,7 @@ body {
   color: var(--base-color-light);
   line-height: 1.7;
   min-height: 100vh;
+  padding-top: 75px;
 }
 
 a {
@@ -40,6 +41,7 @@ a {
   background-color: var(--base-color);
   color: #fff;
   padding: 10px 30px;
+  font-weight: 600;
   border-radius: 30px;
   position: relative;
   display: inline-block;
@@ -49,6 +51,22 @@ a {
   background-color: var(--secondary-color);
   color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.outline-button {
+  border: 1.5px solid var(--secondary-color);
+  color: #fff;
+  padding: 10px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.outline-button:hover {
+  background: var(--gradient-color);
   transform: translateY(-2px);
 }
 
@@ -83,6 +101,7 @@ nav .logo span {
   font-size: 50px;
   margin-right: 5px;
   font-weight: 900;
+  color: var(--secondary-color);
 }
 
 nav ul {
@@ -451,11 +470,17 @@ nav ul a:hover {
     padding: 10px 15px;
     margin-left: 15px;
   }
-  nav ul .primary-button {
+  nav ul .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav ul .nav-buttons a {
     margin-left: 15px;
     padding-left: 15px;
+    background-color: var(--secondary-color);
   }
-  nav ul .primary-button,
+
   nav ul a {
     width: 90%;
     max-width: 300px;
@@ -463,6 +488,7 @@ nav ul a:hover {
     transition: all 0.3s ease;
     border-radius: 30px;
   }
+
   nav ul a:hover {
     background-color: var(--secondary-color);
     color: #fff;
@@ -487,6 +513,13 @@ nav ul a:hover {
 /* Mobile (Portrait) */
 
 @media (max-width: 480px) and (orientation: portrait) {
+  nav .logo {
+    font-size: 10px;
+  }
+  nav .logo span {
+    font-size: 39px;
+  }
+
 }
 
 /* lecture section styles */
@@ -595,7 +628,7 @@ nav ul a:hover {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 768px)  {}
   .layout {
     grid-template-columns: 1fr;
   }
@@ -603,76 +636,272 @@ nav ul a:hover {
   .lectures {
     grid-template-columns: 1fr;
   }
+
+/* =================================
+   RESULTS SECTION BY SWABULAH
+================================= */
+
+/* PAGE FONT */
+
+body{
+font-family:'Inter',sans-serif;
+background:#f3f4f6;
+margin:0;
+padding:0;
 }
 
-/* LOGIN PAGE — Rogers */
+
+/* HEADER */
+
+.results-header{
+background:linear-gradient(90deg,#0f172a,#1e1b4b,#065f46);
+color:white;
+text-align:center;
+padding:80px 20px;
+margin-top:75px;
+}
+
+.results-title{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+font-size:34px;
+font-weight:700;
+}
+
+.results-title i{
+font-size:28px;
+}
+
+.results-header p{
+margin-top:10px;
+opacity:0.85;
+font-size:15px;
+}
+
+
+/* SUMMARY CARDS */
+
+.results-summary{
+display:flex;
+gap:20px;
+justify-content:center;
+padding:30px;
+flex-wrap:wrap;
+margin-top:-40px;
+}
+
+.result-card{
+background:white;
+border-radius:16px;
+padding:20px;
+min-width:220px;
+text-align:center;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.25s;
+}
+
+.result-card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.result-card i{
+font-size:22px;
+color:#2563eb;
+margin-bottom:8px;
+}
+
+.result-card h2{
+margin:5px 0;
+font-size:24px;
+font-weight:700;
+}
+
+.result-card span{
+font-size:14px;
+color:#777;
+}
+
+
+/* SECTION TITLE */
+
+.results-section-title{
+font-size:22px;
+font-weight:700;
+margin:30px 20px 10px;
+}
+
+
+/* SEMESTER CARDS CONTAINER */
+
+.results-semesters{
+display:flex;
+gap:25px;
+padding:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+
+/* SEMESTER CARD */
+
+.result-sem-card{
+width:320px;
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.result-sem-card:hover{
+transform:translateY(-5px);
+}
+
+
+/* SEMESTER HEADER */
+
+.result-sem-header{
+padding:18px;
+color:white;
+display:flex;
+justify-content:space-between;
+font-weight:600;
+font-size:15px;
+}
+
+.sem-blue{
+background:linear-gradient(135deg,#3b82f6,#38bdf8);
+}
+
+.sem-green{
+background:linear-gradient(135deg,#22c55e,#4ade80);
+}
+
+.sem-purple{
+background:linear-gradient(135deg,#9333ea,#c084fc);
+}
+
+
+/* COURSE ROW */
+
+.result-course{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 18px;
+border-bottom:1px solid #f1f1f1;
+}
+
+.result-course div{
+font-weight:600;
+}
+
+.result-course small{
+display:block;
+font-size:13px;
+color:#777;
+font-weight:400;
+}
+
+
+/* GRADE BADGES */
+
+.result-grade{
+padding:6px 12px;
+border-radius:10px;
+font-size:13px;
+font-weight:600;
+}
+
+.grade-a{
+background:#dcfce7;
+color:#15803d;
+}
+
+.grade-am{
+background:#e0f2fe;
+color:#0369a1;
+}
+
+.grade-bp{
+background:#dbeafe;
+color:#1d4ed8;
+}
+
+.grade-b{
+background:#e2e8f0;
+color:#334155;
+}
+
+
+/* FOOTER */
+
+.result-footer{
+display:flex;
+justify-content:space-between;
+padding:14px 18px;
+font-size:13px;
+color:#555;
+}
+
+.result-status{
+background:#dcfce7;
+color:#15803d;
+padding:5px 12px;
+border-radius:20px;
+font-weight:600;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.results-summary{
+flex-direction:column;
+align-items:center;
+}
+
+.results-semesters{
+flex-direction:column;
+align-items:center;
+}
+
+/* LOGIN PAGE — ROGERS */
 
 body.login-page {
-  background: linear-gradient(
-    135deg,
-    #0d1b2a 0%,
-    #0f2040 25%,
-    #1a1035 55%,
-    #2d1b4e 80%,
-    #1a2e1a 100%
-  );
-  min-height: 100vh;
-}
-
-body.login-page nav {
-  background: #ffffff;
-  position: relative;
-  z-index: 10;
-}
-
-body.login-page nav .logo,
-body.login-page nav ul a {
-  color: var(--base-color);
-}
-
-body.login-page nav ul a:hover {
-  color: var(--secondary-color);
-}
-
-body.login-page nav .primary-button {
   background-color: var(--base-color);
-  color: #fff;
-}
-
-body.login-page nav .primary-button:hover {
-  background-color: var(--secondary-color);
-  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body.login-page::before {
+  background-color: rgba(52, 152, 219, 0.503);
   content: "";
   position: fixed;
-  top: 10%;
-  right: 10%;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(
-    circle,
-    rgba(100, 60, 180, 0.22) 0%,
-    transparent 70%
-  );
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
+  top: -100px;
+  right: -150px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
   pointer-events: none;
-  z-index: 0;
 }
 body.login-page::after {
   content: "";
   position: fixed;
-  bottom: 5%;
-  left: 5%;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(
-    circle,
-    rgba(30, 120, 80, 0.18) 0%,
-    transparent 70%
-  );
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
   pointer-events: none;
-  z-index: 0;
 }
 
 .login-section {
@@ -804,6 +1033,7 @@ body.login-page::after {
   color: var(--base-color-light);
   cursor: pointer;
   user-select: none;
+  flex-wrap: wrap;
 }
 
 .login-remember input[type="checkbox"] {
@@ -845,11 +1075,12 @@ body.login-page::after {
 }
 
 .login-forgot {
+  display: flex;
   font-size: 13.5px;
   font-weight: 600;
   color: var(--primary-color);
   transition: color 0.2s ease;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .login-forgot:hover {
@@ -858,11 +1089,8 @@ body.login-page::after {
 
 .login-submit {
   width: 100%;
-  background: var(--base-color);
-  color: #fff;
   border: none;
   padding: 12px 24px;
-  border-radius: 30px;
   font-size: 15px;
   font-weight: 700;
   font-family: inherit;
@@ -871,16 +1099,6 @@ body.login-page::after {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
-}
-
-.login-submit:hover {
-  background: #222;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .login-divider {
@@ -905,7 +1123,7 @@ body.login-page::after {
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 11px 24px;
+  padding: 12px 24px;
   border: 1.5px solid #ddd;
   border-radius: 30px;
   font-size: 14.5px;
@@ -918,7 +1136,7 @@ body.login-page::after {
 }
 
 .login-create-account:hover {
-  border-color: var(--base-color);
+  border-color: var(--secondary-color);
   background: #f5f5f5;
   transform: translateY(-1px);
 }
@@ -1050,3 +1268,267 @@ body.login-page::after {
   color: var(--primary-color);
 }
 
+/* PAGE BACKGROUND — Reusable dark bg with animated gradient orbs */
+.page-background {
+  background-color: var(--base-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-background::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
+  top: -100px;
+  right: -150px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.page-background::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+/* COMMUNICATION HERO SECTION BY ABEL */
+.comm-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.comm-hero-inner {
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+
+.comm-hero-desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+
+/* COMMUNICATION CARDS SECTION BY SUBAN */
+.comm-cards-section {
+  background: #f8f9fa;
+  padding: 60px 20px 80px;
+}
+
+.comm-cards-section .container {
+  display: grid;
+  gap: 24px;
+}
+
+/* Card base */
+.comm-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.comm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+}
+
+.comm-card--urgent {
+  border: 1.5px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Accent bar at top of card */
+.comm-card-accent {
+  height: 4px;
+}
+
+.comm-card-accent--red {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+.comm-card-accent--blue {
+  background: linear-gradient(90deg, #3498db, #60a5fa);
+}
+.comm-card-accent--green {
+  background: linear-gradient(90deg, #2ecc71, #34d399);
+}
+.comm-card-accent--purple {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+}
+.comm-card-accent--orange {
+  background: linear-gradient(90deg, #e67e22, #f59e0b);
+}
+.comm-card-accent--teal {
+  background: linear-gradient(90deg, #1abc9c, #2dd4bf);
+}
+
+/* Card body */
+.comm-card-body {
+  padding: 24px 28px;
+}
+
+.comm-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+/* Tags */
+.comm-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.comm-tag .material-symbols-outlined {
+  font-size: 15px;
+}
+
+.comm-tag--red {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+.comm-tag--blue {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+.comm-tag--green {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+.comm-tag--purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
+}
+.comm-tag--orange {
+  background: rgba(230, 126, 34, 0.1);
+  color: #e67e22;
+}
+.comm-tag--teal {
+  background: rgba(26, 188, 156, 0.1);
+  color: #1abc9c;
+}
+
+.comm-date {
+  font-size: 12.5px;
+  color: #999;
+}
+
+/* Card content */
+.comm-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--base-color);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.comm-card-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Card footer */
+.comm-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.comm-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--base-color-light);
+}
+
+.comm-author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ef4444;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.comm-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: gap 0.25s ease;
+}
+
+.comm-read-more:hover {
+  gap: 8px;
+  color: var(--secondary-color);
+}
+
+.comm-read-more .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.material-icons {
+  font-size: 18px;
+  vertical-align: middle;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Communication responsive */
+@media (max-width: 767px) {
+  .comm-hero {
+    min-height: 40vh;
+    padding: 60px 20px 40px;
+  }
+  .comm-card-body {
+    padding: 18px 20px;
+  }
+  .comm-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comm-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
