@@ -1532,3 +1532,651 @@ body.login-page::after {
     gap: 12px;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+/* LOGIN PAGE — Rogers */
+
+body.login-page {
+  background: linear-gradient(
+    135deg,
+    #0d1b2a 0%,
+    #0f2040 25%,
+    #1a1035 55%,
+    #2d1b4e 80%,
+    #1a2e1a 100%
+  );
+  min-height: 100vh;
+}
+
+body.login-page nav {
+  background: #ffffff;
+  position: relative;
+  z-index: 10;
+}
+
+body.login-page nav .logo,
+body.login-page nav ul a {
+  color: var(--base-color);
+}
+
+body.login-page nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+body.login-page nav .primary-button {
+  background-color: var(--base-color);
+  color: #fff;
+}
+
+body.login-page nav .primary-button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+body.login-page::before {
+  content: "";
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(100, 60, 180, 0.22) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+body.login-page::after {
+  content: "";
+  position: fixed;
+  bottom: 5%;
+  left: 5%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(
+    circle,
+    rgba(30, 120, 80, 0.18) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.login-section {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 460px;
+  padding: 32px 44px 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.login-card-top-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b9edd 0%, #1abc9c 50%, #2ecc71 100%);
+  border-radius: 20px 20px 0 0;
+}
+
+.login-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.login-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--base-color);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.login-subtitle {
+  font-size: 13.5px;
+  color: var(--base-color-light);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.login-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--base-color);
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 14px;
+  color: #aaa;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.login-input {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--base-color);
+  background: #fafafa;
+  outline: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.login-input::placeholder {
+  color: #bbb;
+}
+
+.login-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+  background: #fff;
+}
+
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--base-color-light);
+  cursor: pointer;
+  user-select: none;
+}
+
+.login-remember input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.login-checkbox-custom {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-remember input[type="checkbox"]:checked + .login-checkbox-custom {
+  background: var(--base-color);
+  border-color: var(--base-color);
+}
+
+.login-remember input[type="checkbox"]:checked + .login-checkbox-custom::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.login-forgot {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.login-forgot:hover {
+  color: #2176ae;
+}
+
+.login-submit {
+  width: 100%;
+  background: var(--base-color);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+
+.login-submit:hover {
+  background: #222;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e8e8e8;
+}
+
+.login-create-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 24px;
+  border: 1.5px solid #ddd;
+  border-radius: 30px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--base-color);
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.login-create-account:hover {
+  border-color: var(--base-color);
+  background: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 520px) {
+  .login-card {
+    padding: 36px 24px 32px;
+  }
+  .login-title {
+    font-size: 22px;
+  }
+}
+/* ===== FOOTER SECTION BY COPILOT ===== */
+
+/* Main footer container with dark background matching design system */
+.footer {
+  background-color: var(--base-color);
+  color: #ffffff;
+  padding: 60px 20px 30px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient blob animations similar to hero section - blue gradient on top right */
+.footer-gradient-blob--blue {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #3498db40 0%, rgba(52, 152, 219, 0) 70%);
+  top: -100px;
+  right: -80px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Gradient blob animations similar to hero section - green gradient on bottom left */
+.footer-gradient-blob--green {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, #1abc9c35 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+/* Footer wrapper with max-width constraint */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid layout for footer sections */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+/* Individual footer section styling */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Brand section with logo and description */
+.footer-brand {
+  gap: 20px;
+}
+
+/* Footer logo styling with icon and text */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.footer-logo span.material-symbols-outlined {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Gradient text for footer logo - matches hero gradient effect */
+.footer-logo-text {
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Description text for footer brand */
+.footer-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* Social media links container */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Individual social media link styling with gradient border on hover */
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  position: relative;
+}
+
+/* Font Awesome icon styling within social links */
+.social-link i {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Social link hover state with gradient border and glow effect */
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3), inset 0 0 12px rgba(52, 152, 219, 0.2);
+}
+
+/* Footer section heading styling with gradient accent */
+.footer-heading {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* Gradient underline for section headings */
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gradient-color);
+  border-radius: 1px;
+}
+
+/* Footer links list styling */
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual footer link styling with gradient hover effect */
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Footer link hover state with gradient text and icon */
+.footer-links a:hover {
+  color: var(--secondary-color);
+  padding-left: 6px;
+}
+
+/* Gradient divider line between main content and bottom footer */
+.footer-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #3498db80,
+    #1abc9c80,
+    #2ecc7180,
+    transparent
+  );
+  margin: 40px 0;
+}
+
+/* Bottom footer section with copyright and credit */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* Copyright text styling */
+.footer-copyright {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Credit/tagline text styling with gradient effect */
+.footer-credit {
+  font-size: 13px;
+  background: var(--gradient-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Responsive design for tablets and below */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 20px 25px;
+    margin-top: 60px;
+  }
+
+  .footer-gradient-blob--blue {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    right: -60px;
+  }
+
+  .footer-gradient-blob--green {
+    width: 250px;
+    height: 250px;
+    bottom: -40px;
+    left: -80px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-gradient-blob--blue {
+    width: 250px;
+    height: 250px;
+    top: -60px;
+    right: -50px;
+  }
+
+  .footer-gradient-blob--green {
+    width: 200px;
+    height: 200px;
+    bottom: -30px;
+    left: -70px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .footer-socials {
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .footer-heading {
+    font-size: 13px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-copyright,
+  .footer-credit {
+    font-size: 12px;
+  }
+}
+>>>>>>> Stashed changes
