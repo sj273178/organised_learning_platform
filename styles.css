@@ -917,6 +917,61 @@ body.login-page::after {
     font-size: 22px;
   }
 }
+/* PAGE BACKGROUND — Reusable dark bg with animated gradient orbs */
+.page-background {
+  background-color: var(--base-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-background::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
+  top: -100px;
+  right: -150px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.page-background::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+/* COMMUNICATION HERO SECTION BY ABEL */
+.comm-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.comm-hero-inner {
+  max-width: 680px;
+  position: relative;
+  z-index: 1;
+}
+
+.comm-hero-desc {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
 
 /* COMMUNICATION CARDS SECTION BY SUBAN */
 .comm-cards-section {
