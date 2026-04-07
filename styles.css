@@ -1,4 +1,23 @@
-/* BY JESLOR */
+/* ========================================================================
+   ORGANISED LEARNING PLATFORM — Cavendish University
+   ========================================================================
+   Contributors (from git history):
+   - Jeslor Ssozi          : Root theme, CSS variables, icon library
+   - Tukamushaba Ruth      : Navbar design & responsiveness
+   - Esther Musiime        : Button styles
+   - Moisha Ndlovu         : Hero section & styling
+   - Hillary (bh256126)    : Lectures section (index page)
+   - km4897 (Milly)        : Lectures page hero section
+   - ATWINE Abel Mwesigye  : Communication hero section
+   - Suban Mohamed          : Communication cards
+   - Swabulah (Swabra5)    : Results page
+   - Rogers Onyango        : Login page
+   - Natasha (tasha256)    : Footer
+   ======================================================================== */
+
+/* =============================================
+   1. ROOT VARIABLES & RESET — Jeslor Ssozi
+   ============================================= */
 :root {
   --base-color: #000000;
   --base-color-light: #424242;
@@ -11,7 +30,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: 400;
 }
 
 body {
@@ -24,10 +42,12 @@ body {
   line-height: 1.7;
   min-height: 100vh;
   padding-top: 75px;
+  background-color: #ffffff;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -36,22 +56,29 @@ a {
   width: 100%;
 }
 
-/* BUTTONS BY ESTHER */
+/* =============================================
+   2. BUTTONS — Esther Musiime
+   ============================================= */
 .primary-button {
   background-color: var(--base-color);
   color: #fff;
   padding: 10px 30px;
   font-weight: 600;
   border-radius: 30px;
-  position: relative;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
   display: inline-block;
   transition: all 0.3s ease;
+  border: 1.5px solid var(--base-color);
 }
+
 .primary-button:hover {
   background-color: var(--secondary-color);
   color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  border-color: var(--secondary-color);
 }
 
 .outline-button {
@@ -62,15 +89,20 @@ a {
   border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
-  box-sizing: border-box;
+  background: transparent;
+  display: inline-block;
   transition: all 0.3s ease;
 }
+
 .outline-button:hover {
   background: var(--gradient-color);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* NAVBAR BY RUTH */
+/* =============================================
+   3. NAVBAR — Tukamushaba Ruth
+   ============================================= */
 nav {
   height: 75px;
   display: flex;
@@ -84,11 +116,13 @@ nav {
   width: 100%;
   z-index: 9999;
 }
+
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 nav .logo {
   font-size: 24px;
   font-weight: 900;
@@ -109,15 +143,21 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 20px;
-  font-weight: 700;
 }
+
 nav ul a {
   color: var(--base-color);
   font-weight: 600;
   transition: color 0.3s ease;
 }
+
 nav ul a:hover {
   color: var(--secondary-color);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
 }
 
 .mobile-menu {
@@ -128,14 +168,15 @@ nav ul a:hover {
 #menu-toggle {
   display: none;
 }
+
 .mobile-menu .menu {
   height: 40px;
   background-color: var(--secondary-color);
   padding: 10px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  display: none;
+  border-radius: 8px;
 }
 
 .mobile-menu .menu span {
@@ -155,26 +196,32 @@ nav ul a:hover {
   background-color: var(--base-color);
   transition: all 0.3s ease;
 }
+
 .mobile-menu .menu span::before {
   top: -8px;
 }
+
 .mobile-menu .menu span::after {
   top: 8px;
 }
+
 #menu-toggle:checked + .mobile-menu .menu span {
   background-color: transparent;
 }
+
 #menu-toggle:checked + .mobile-menu .menu span::before {
   transform: rotate(45deg);
   top: 0;
 }
+
 #menu-toggle:checked + .mobile-menu .menu span::after {
   transform: rotate(-45deg);
   top: 0;
 }
 
-/* HERO SECTION BY MOISHA */
-
+/* =============================================
+   4. HERO SECTION — Moisha Ndlovu
+   ============================================= */
 .hero {
   background-color: var(--base-color);
   min-height: calc(100vh - 75px);
@@ -186,7 +233,6 @@ nav ul a:hover {
 }
 
 .hero::before {
-  background-color: rgba(52, 152, 219, 0.503);
   content: "";
   position: absolute;
   width: 600px;
@@ -196,6 +242,7 @@ nav ul a:hover {
   right: -150px;
   border-radius: 50%;
   animation: float 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero::after {
@@ -208,6 +255,7 @@ nav ul a:hover {
   left: -100px;
   border-radius: 50%;
   animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
 }
 
 @keyframes float {
@@ -299,13 +347,13 @@ nav ul a:hover {
   display: flex;
   align-items: center;
   gap: 18px;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+  transition: all 0.3s ease;
 }
+
 .hero-card:hover {
-  transform: translateX(4px);
+  transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .hero-card-border {
@@ -316,6 +364,7 @@ nav ul a:hover {
   width: 3px;
   border-radius: 16px 0 0 16px;
 }
+
 .hero-card-border--blue {
   background: var(--primary-color);
 }
@@ -336,6 +385,7 @@ nav ul a:hover {
   flex-shrink: 0;
   font-size: 26px;
 }
+
 .hero-card-icon-box--blue {
   background: #1a2a3a;
 }
@@ -366,173 +416,21 @@ nav ul a:hover {
   margin: 0;
 }
 
-/* Laptops / Small Desktops */
-@media (max-width: 1279px) {
-}
-
-/* Tablets (Landscape) */
-@media (max-width: 1023px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-left {
-    max-width: 100%;
-  }
-  .hero-description {
-    max-width: 100%;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-right {
-    flex: unset;
-    width: 100%;
-    max-width: 480px;
-  }
-}
-
-/* Tablets (Portrait) */
-@media (max-width: 767px) {
-}
-
-/* Mobile (Landscape) */
-@media (max-width: 932px) and (orientation: landscape) {
-}
-
-/* Small (sm): 640px and down */
-@media (max-width: 639px) {
-}
-
-/* Mobile (Portrait) */
-
-@media (max-width: 480px) and (orientation: portrait) {
-}
-/* Laptops / Small Desktops */
-@media (max-width: 1279px) {
-  nav ul {
-    gap: 20px 15px;
-  }
-}
-
-/* Tablets (Landscape) */
-@media (max-width: 1023px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-left {
-    max-width: 100%;
-  }
-  .hero-description {
-    max-width: 100%;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-right {
-    flex: unset;
-    width: 100%;
-    max-width: 480px;
-  }
-
-  .mobile-menu .menu {
-    display: flex;
-  }
-
-  nav ul {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    position: fixed;
-    top: 75px;
-    left: -100%;
-    background-color: rgb(0 0 0 / 65%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    flex-direction: column;
-    width: 100%;
-    z-index: 400;
-    gap: 10px;
-    border-radius: 0 0 20px 20px;
-  }
-  #menu-toggle:checked ~ ul {
-    left: 0;
-    display: flex;
-  }
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul a {
-    color: #fff;
-    width: 100%;
-    display: block;
-    padding: 10px 15px;
-    margin-left: 15px;
-  }
-  nav ul .nav-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  nav ul .nav-buttons a {
-    margin-left: 15px;
-    padding-left: 15px;
-    background-color: var(--secondary-color);
-  }
-
-  nav ul a {
-    width: 90%;
-    max-width: 300px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    border-radius: 30px;
-  }
-
-  nav ul a:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-    width: 90%;
-  }
-}
-
-/* Tablets (Portrait) */
-@media (max-width: 767px) {
-}
-
-/* Mobile (Landscape) */
-@media (max-width: 932px) and (orientation: landscape) {
-}
-
-/* Small (sm): 640px and down */
-@media (max-width: 639px) {
-}
-
-/* Mobile (Portrait) */
-
-@media (max-width: 480px) and (orientation: portrait) {
-  nav .logo {
-    font-size: 10px;
-  }
-  nav .logo span {
-    font-size: 39px;
-  }
-
-}
-
-/* lecture section styles */
+/* =============================================
+   5. LECTURE SECTION (Index Page) — Hillary
+   ============================================= */
 .lecturers_section {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  padding: 25px;
+  padding: 40px 25px;
 }
 
 .lectures_h1 {
   margin-bottom: 20px;
   font-weight: 800;
+  font-size: 28px;
+  color: var(--base-color);
 }
 
 .layout {
@@ -541,21 +439,21 @@ nav ul a:hover {
   gap: 20px;
 }
 
-/* CARD BASE */
 .lecture_card {
   background: #ffffff;
   color: #000;
   border-radius: 14px;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .lecture_card:hover {
-  transform: translateX(4px);
-  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: #f9fafb;
 }
 
-/* CALENDAR */
 .calendar {
   min-height: 220px;
 }
@@ -563,6 +461,7 @@ nav ul a:hover {
 .calendar h3 {
   margin-top: 0;
   font-size: 16px;
+  font-weight: 700;
 }
 
 .calendar-grid {
@@ -591,7 +490,6 @@ nav ul a:hover {
   letter-spacing: 0.02em;
 }
 
-/* RIGHT SIDE */
 .lectures {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -609,6 +507,12 @@ nav ul a:hover {
   margin: 5px 0;
 }
 
+.lecture-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
 .lecture_btn {
   padding: 8px 20px;
   border-radius: 30px;
@@ -616,541 +520,9 @@ nav ul a:hover {
   font-size: 10px;
 }
 
-/* SMOOTH TRANSITIONS */
-.lecture_card {
-  transition: all 0.25s ease;
-}
-
-/* CARD HOVER EFFECT */
-.lecture_card:hover {
-  transform: translateX(4px);
-  background: #f9fafb;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px)  {}
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .lectures {
-    grid-template-columns: 1fr;
-  }
-
-/* =================================
-   RESULTS SECTION BY SWABULAH
-================================= */
-
-/* PAGE FONT */
-
-body{
-font-family:'Inter',sans-serif;
-background:#f3f4f6;
-margin:0;
-padding:0;
-}
-
-
-/* HEADER */
-
-.results-header{
-background:linear-gradient(90deg,#0f172a,#1e1b4b,#065f46);
-color:white;
-text-align:center;
-padding:80px 20px;
-margin-top:75px;
-}
-
-.results-title{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:12px;
-font-size:34px;
-font-weight:700;
-}
-
-.results-title i{
-font-size:28px;
-}
-
-.results-header p{
-margin-top:10px;
-opacity:0.85;
-font-size:15px;
-}
-
-
-/* SUMMARY CARDS */
-
-.results-summary{
-display:flex;
-gap:20px;
-justify-content:center;
-padding:30px;
-flex-wrap:wrap;
-margin-top:-40px;
-}
-
-.result-card{
-background:white;
-border-radius:16px;
-padding:20px;
-min-width:220px;
-text-align:center;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-transition:0.25s;
-}
-
-.result-card:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 25px rgba(0,0,0,0.15);
-}
-
-.result-card i{
-font-size:22px;
-color:#2563eb;
-margin-bottom:8px;
-}
-
-.result-card h2{
-margin:5px 0;
-font-size:24px;
-font-weight:700;
-}
-
-.result-card span{
-font-size:14px;
-color:#777;
-}
-
-
-/* SECTION TITLE */
-
-.results-section-title{
-font-size:22px;
-font-weight:700;
-margin:30px 20px 10px;
-}
-
-
-/* SEMESTER CARDS CONTAINER */
-
-.results-semesters{
-display:flex;
-gap:25px;
-padding:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-
-/* SEMESTER CARD */
-
-.result-sem-card{
-width:320px;
-background:white;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.3s;
-}
-
-.result-sem-card:hover{
-transform:translateY(-5px);
-}
-
-
-/* SEMESTER HEADER */
-
-.result-sem-header{
-padding:18px;
-color:white;
-display:flex;
-justify-content:space-between;
-font-weight:600;
-font-size:15px;
-}
-
-.sem-blue{
-background:linear-gradient(135deg,#3b82f6,#38bdf8);
-}
-
-.sem-green{
-background:linear-gradient(135deg,#22c55e,#4ade80);
-}
-
-.sem-purple{
-background:linear-gradient(135deg,#9333ea,#c084fc);
-}
-
-
-/* COURSE ROW */
-
-.result-course{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 18px;
-border-bottom:1px solid #f1f1f1;
-}
-
-.result-course div{
-font-weight:600;
-}
-
-.result-course small{
-display:block;
-font-size:13px;
-color:#777;
-font-weight:400;
-}
-
-
-/* GRADE BADGES */
-
-.result-grade{
-padding:6px 12px;
-border-radius:10px;
-font-size:13px;
-font-weight:600;
-}
-
-.grade-a{
-background:#dcfce7;
-color:#15803d;
-}
-
-.grade-am{
-background:#e0f2fe;
-color:#0369a1;
-}
-
-.grade-bp{
-background:#dbeafe;
-color:#1d4ed8;
-}
-
-.grade-b{
-background:#e2e8f0;
-color:#334155;
-}
-
-
-/* FOOTER */
-
-.result-footer{
-display:flex;
-justify-content:space-between;
-padding:14px 18px;
-font-size:13px;
-color:#555;
-}
-
-.result-status{
-background:#dcfce7;
-color:#15803d;
-padding:5px 12px;
-border-radius:20px;
-font-weight:600;
-}
-
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-.results-summary{
-flex-direction:column;
-align-items:center;
-}
-
-.results-semesters{
-flex-direction:column;
-align-items:center;
-}
-
-/* LOGIN PAGE — ROGERS */
-
-body.login-page {
-  background-color: var(--base-color);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-body.login-page::before {
-  background-color: rgba(52, 152, 219, 0.503);
-  content: "";
-  position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
-  top: -100px;
-  right: -150px;
-  border-radius: 50%;
-  animation: float 8s ease-in-out infinite;
-  pointer-events: none;
-}
-body.login-page::after {
-  content: "";
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
-  bottom: -50px;
-  left: -100px;
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite reverse;
-  pointer-events: none;
-}
-
-.login-section {
-  min-height: calc(100vh - 75px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.login-card {
-  background: #ffffff;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 460px;
-  padding: 32px 44px 28px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-}
-
-.login-card-top-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b9edd 0%, #1abc9c 50%, #2ecc71 100%);
-  border-radius: 20px 20px 0 0;
-}
-
-.login-icon-wrap {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: var(--secondary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 14px;
-}
-
-.login-title {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--base-color);
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-.login-subtitle {
-  font-size: 13.5px;
-  color: var(--base-color-light);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.login-field {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.login-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--base-color);
-}
-
-.login-input-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.login-input-icon {
-  position: absolute;
-  left: 14px;
-  color: #aaa;
-  pointer-events: none;
-  flex-shrink: 0;
-}
-
-.login-input {
-  width: 100%;
-  padding: 10px 16px 10px 42px;
-  border: 1.5px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 14px;
-  font-family: inherit;
-  color: var(--base-color);
-  background: #fafafa;
-  outline: none;
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.login-input::placeholder {
-  color: #bbb;
-}
-
-.login-input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
-  background: #fff;
-}
-
-.login-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.login-remember {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13.5px;
-  color: var(--base-color-light);
-  cursor: pointer;
-  user-select: none;
-  flex-wrap: wrap;
-}
-
-.login-remember input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.login-checkbox-custom {
-  width: 16px;
-  height: 16px;
-  border: 1.5px solid #ccc;
-  border-radius: 4px;
-  display: inline-block;
-  flex-shrink: 0;
-  position: relative;
-  transition:
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.login-remember input[type="checkbox"]:checked + .login-checkbox-custom {
-  background: var(--base-color);
-  border-color: var(--base-color);
-}
-
-.login-remember input[type="checkbox"]:checked + .login-checkbox-custom::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 0px;
-  width: 5px;
-  height: 9px;
-  border: 2px solid #fff;
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg);
-}
-
-.login-forgot {
-  display: flex;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--primary-color);
-  transition: color 0.2s ease;
-  flex-wrap: wrap;
-}
-
-.login-forgot:hover {
-  color: #2176ae;
-}
-
-.login-submit {
-  width: 100%;
-  border: none;
-  padding: 12px 24px;
-  font-size: 15px;
-  font-weight: 700;
-  font-family: inherit;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.login-divider {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: #ccc;
-  font-size: 13px;
-}
-
-.login-divider::before,
-.login-divider::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #e8e8e8;
-}
-
-.login-create-account {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 12px 24px;
-  border: 1.5px solid #ddd;
-  border-radius: 30px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--base-color);
-  transition:
-    border-color 0.25s ease,
-    background 0.25s ease,
-    transform 0.2s ease;
-}
-
-.login-create-account:hover {
-  border-color: var(--secondary-color);
-  background: #f5f5f5;
-  transform: translateY(-1px);
-}
-
-@media (max-width: 520px) {
-  .login-card {
-    padding: 36px 24px 32px;
-  }
-  .login-title {
-    font-size: 22px;
-  }
-}
-
-/* LECTURE HERO BUILT BY MILLY */
+/* =============================================
+   6. LECTURES PAGE HERO — km4897 (Milly)
+   ============================================= */
 .lectures-hero.hero {
   padding-top: calc(60px + 20px);
   min-height: auto;
@@ -1177,13 +549,16 @@ body.login-page::after {
   align-items: center;
   gap: 10px;
 }
+
 .lectures-hero-content h1 span {
   font-size: 50px;
   margin-right: 5px;
   font-weight: 900;
 }
+
 .lectures-hero-description {
   color: rgba(255, 255, 255, 0.5);
+  margin-top: 12px;
 }
 
 .lectures-hero-buttons {
@@ -1194,6 +569,7 @@ body.login-page::after {
   gap: 16px;
   margin-top: 20px;
 }
+
 .lectures-hero-buttons button {
   display: flex;
   align-items: center;
@@ -1210,6 +586,7 @@ body.login-page::after {
   color: var(--base-color);
   text-transform: capitalize;
 }
+
 .lecture-hero-cards {
   display: flex;
   justify-content: center;
@@ -1239,6 +616,7 @@ body.login-page::after {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  font-weight: 700;
 }
 
 .lectures-hero-sub article::before {
@@ -1252,8 +630,13 @@ body.login-page::after {
   background: var(--primary-color);
   border-radius: 10px 0 0 10px;
 }
+
 .lectures-hero-sub article:nth-child(2)::before {
   background: var(--secondary-color);
+}
+
+.lectures-hero-sub article:nth-child(3)::before {
+  background: #8b5cf6;
 }
 
 .lectures-hero-sub h4 {
@@ -1263,12 +646,20 @@ body.login-page::after {
   text-transform: capitalize;
 }
 
+.lectures-hero-sub p {
+  font-size: 13px;
+  color: var(--base-color-light);
+}
+
 .lectures-hero-sub span {
   font-size: 3rem;
   color: var(--primary-color);
 }
 
-/* PAGE BACKGROUND — Reusable dark bg with animated gradient orbs */
+/* =============================================
+   7. PAGE BACKGROUND — Jeslor Ssozi
+   Reusable dark bg with animated gradient orbs
+   ============================================= */
 .page-background {
   background-color: var(--base-color);
   position: relative;
@@ -1301,7 +692,11 @@ body.login-page::after {
   pointer-events: none;
 }
 
-/* COMMUNICATION HERO SECTION BY ABEL */
+/* =============================================
+   8. COMMUNICATION — Abel Mwesigye (Hero) + Suban Mohamed (Cards)
+   ============================================= */
+
+/* Hero — Abel Mwesigye */
 .comm-hero {
   min-height: 50vh;
   display: flex;
@@ -1323,8 +718,9 @@ body.login-page::after {
   line-height: 1.7;
   max-width: 520px;
   margin: 0 auto;
+}
 
-/* COMMUNICATION CARDS SECTION BY SUBAN */
+/* Cards — Suban Mohamed */
 .comm-cards-section {
   background: #f8f9fa;
   padding: 60px 20px 80px;
@@ -1335,27 +731,23 @@ body.login-page::after {
   gap: 24px;
 }
 
-/* Card base */
 .comm-card {
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .comm-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .comm-card--urgent {
   border: 1.5px solid rgba(239, 68, 68, 0.25);
 }
 
-/* Accent bar at top of card */
 .comm-card-accent {
   height: 4px;
 }
@@ -1379,7 +771,6 @@ body.login-page::after {
   background: linear-gradient(90deg, #1abc9c, #2dd4bf);
 }
 
-/* Card body */
 .comm-card-body {
   padding: 24px 28px;
 }
@@ -1391,7 +782,6 @@ body.login-page::after {
   margin-bottom: 14px;
 }
 
-/* Tags */
 .comm-tag {
   display: inline-flex;
   align-items: center;
@@ -1436,7 +826,6 @@ body.login-page::after {
   color: #999;
 }
 
-/* Card content */
 .comm-card-title {
   font-size: 18px;
   font-weight: 700;
@@ -1452,7 +841,6 @@ body.login-page::after {
   margin-bottom: 20px;
 }
 
-/* Card footer */
 .comm-card-footer {
   display: flex;
   align-items: center;
@@ -1502,117 +890,236 @@ body.login-page::after {
   font-size: 16px;
 }
 
-.material-icons {
-  font-size: 18px;
-  vertical-align: middle;
-  text-transform: none;
-  letter-spacing: normal;
+/* =============================================
+   9. RESULTS PAGE — Swabulah (Swabra5)
+   ============================================= */
+body.results-page {
+  font-family: "Inter", sans-serif;
+  background: #f3f4f6;
 }
 
-/* Communication responsive */
-@media (max-width: 767px) {
-  .comm-hero {
-    min-height: 40vh;
-    padding: 60px 20px 40px;
-  }
-  .comm-card-body {
-    padding: 18px 20px;
-  }
-  .comm-card-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .comm-card-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-}
-<<<<<<< Updated upstream
-=======
-
-/* LOGIN PAGE — Rogers */
-
-body.login-page {
-  background: linear-gradient(
-    135deg,
-    #0d1b2a 0%,
-    #0f2040 25%,
-    #1a1035 55%,
-    #2d1b4e 80%,
-    #1a2e1a 100%
-  );
-  min-height: 100vh;
-}
-
-body.login-page nav {
-  background: #ffffff;
-  position: relative;
-  z-index: 10;
-}
-
-body.login-page nav .logo,
-body.login-page nav ul a {
-  color: var(--base-color);
-}
-
-body.login-page nav ul a:hover {
-  color: var(--secondary-color);
-}
-
-body.login-page nav .primary-button {
+.results-header {
   background-color: var(--base-color);
-  color: #fff;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-body.login-page nav .primary-button:hover {
-  background-color: var(--secondary-color);
-  color: #fff;
-}
-
-body.login-page::before {
+.results-header::before {
   content: "";
-  position: fixed;
-  top: 10%;
-  right: 10%;
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(
-    circle,
-    rgba(100, 60, 180, 0.22) 0%,
-    transparent 70%
-  );
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #3498db59 0%, rgba(52, 152, 219, 0) 70%);
+  top: -100px;
+  right: -150px;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
   pointer-events: none;
-  z-index: 0;
 }
-body.login-page::after {
+
+.results-header::after {
   content: "";
-  position: fixed;
-  bottom: 5%;
-  left: 5%;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #2ecc7159 0%, transparent 70%);
+  bottom: -50px;
+  left: -100px;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+.results-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 34px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.results-title i {
+  font-size: 28px;
+}
+
+.results-header p {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.results-summary {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+  margin-top: -40px;
+}
+
+.result-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.result-card i {
+  font-size: 22px;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.result-card h2 {
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-card span {
+  font-size: 14px;
+  color: #777;
+}
+
+.results-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 30px 20px 10px;
+  text-align: center;
+}
+
+.results-semesters {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.result-sem-card {
   width: 320px;
-  height: 320px;
-  background: radial-gradient(
-    circle,
-    rgba(30, 120, 80, 0.18) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
-  z-index: 0;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.result-sem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.result-sem-header {
+  padding: 18px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.sem-blue {
+  background: linear-gradient(135deg, #3b82f6, #38bdf8);
+}
+.sem-green {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+.sem-purple {
+  background: linear-gradient(135deg, #9333ea, #c084fc);
+}
+
+.result-course {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.result-course div {
+  font-weight: 600;
+}
+
+.result-course small {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  font-weight: 400;
+}
+
+.result-grade {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.grade-a {
+  background: #dcfce7;
+  color: #15803d;
+}
+.grade-am {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+.grade-bp {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.grade-b {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.result-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+.result-status {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* =============================================
+   10. LOGIN PAGE — Rogers Onyango
+   ============================================= */
+.login-page {
+  background-color: var(--base-color);
+  min-height: 100vh;
+  position: relative;
 }
 
 .login-section {
-  min-height: calc(100vh - 75px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 100px 20px 40px;
   position: relative;
-  z-index: 1;
 }
 
 .login-card {
@@ -1623,7 +1130,23 @@ body.login-page::after {
   padding: 32px 44px 28px;
   position: relative;
   overflow: hidden;
+  z-index: 6;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Wider card for register page */
+.register-page .login-card {
+  max-width: 560px;
+}
+
+.login-field-row {
+  display: flex;
+  gap: 14px;
+}
+
+.login-field-row .login-field {
+  flex: 1;
+  min-width: 0;
 }
 
 .login-card-top-border {
@@ -1787,30 +1310,14 @@ body.login-page::after {
 }
 
 .login-submit {
-  width: 100%;
-  background: var(--base-color);
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
+  padding: 15px 0;
   font-size: 15px;
   font-weight: 700;
   font-family: inherit;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease,
-    box-shadow 0.3s ease;
-}
-
-.login-submit:hover {
-  background: #222;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .login-divider {
@@ -1830,40 +1337,23 @@ body.login-page::after {
 }
 
 .login-create-account {
+  color: var(--base-color);
+  text-align: center;
+  gap: 10px;
+  font-weight: 700;
+  font-family: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  width: 100%;
-  padding: 11px 24px;
-  border: 1.5px solid #ddd;
-  border-radius: 30px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--base-color);
-  transition:
-    border-color 0.25s ease,
-    background 0.25s ease,
-    transform 0.2s ease;
 }
 
 .login-create-account:hover {
-  border-color: var(--base-color);
   background: #f5f5f5;
-  transform: translateY(-1px);
 }
 
-@media (max-width: 520px) {
-  .login-card {
-    padding: 36px 24px 32px;
-  }
-  .login-title {
-    font-size: 22px;
-  }
-}
-/* ===== FOOTER SECTION BY COPILOT ===== */
-
-/* Main footer container with dark background matching design system */
+/* =============================================
+   11. FOOTER — Natasha (tasha256)
+   ============================================= */
 .footer {
   background-color: var(--base-color);
   color: #ffffff;
@@ -1874,7 +1364,6 @@ body.login-page::after {
   overflow: hidden;
 }
 
-/* Gradient blob animations similar to hero section - blue gradient on top right */
 .footer-gradient-blob--blue {
   position: absolute;
   width: 400px;
@@ -1887,7 +1376,6 @@ body.login-page::after {
   pointer-events: none;
 }
 
-/* Gradient blob animations similar to hero section - green gradient on bottom left */
 .footer-gradient-blob--green {
   position: absolute;
   width: 300px;
@@ -1900,7 +1388,6 @@ body.login-page::after {
   pointer-events: none;
 }
 
-/* Footer wrapper with max-width constraint */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -1908,7 +1395,6 @@ body.login-page::after {
   z-index: 1;
 }
 
-/* Grid layout for footer sections */
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1916,19 +1402,16 @@ body.login-page::after {
   margin-bottom: 40px;
 }
 
-/* Individual footer section styling */
 .footer-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Brand section with logo and description */
 .footer-brand {
   gap: 20px;
 }
 
-/* Footer logo styling with icon and text */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -1943,7 +1426,6 @@ body.login-page::after {
   font-weight: 700;
 }
 
-/* Gradient text for footer logo - matches hero gradient effect */
 .footer-logo-text {
   background: var(--gradient-color);
   -webkit-background-clip: text;
@@ -1952,7 +1434,6 @@ body.login-page::after {
   font-weight: 700;
 }
 
-/* Description text for footer brand */
 .footer-description {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.65);
@@ -1960,14 +1441,12 @@ body.login-page::after {
   max-width: 280px;
 }
 
-/* Social media links container */
 .footer-socials {
   display: flex;
   gap: 12px;
   margin-top: 8px;
 }
 
-/* Individual social media link styling with gradient border on hover */
 .social-link {
   width: 40px;
   height: 40px;
@@ -1984,7 +1463,6 @@ body.login-page::after {
   position: relative;
 }
 
-/* Font Awesome icon styling within social links */
 .social-link i {
   font-size: 18px;
   display: flex;
@@ -1992,15 +1470,13 @@ body.login-page::after {
   justify-content: center;
 }
 
-/* Social link hover state with gradient border and glow effect */
 .social-link:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--secondary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3), inset 0 0 12px rgba(52, 152, 219, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer section heading styling with gradient accent */
 .footer-heading {
   font-size: 14px;
   font-weight: 700;
@@ -2012,7 +1488,6 @@ body.login-page::after {
   padding-bottom: 8px;
 }
 
-/* Gradient underline for section headings */
 .footer-heading::after {
   content: "";
   position: absolute;
@@ -2024,7 +1499,6 @@ body.login-page::after {
   border-radius: 1px;
 }
 
-/* Footer links list styling */
 .footer-links {
   list-style: none;
   display: flex;
@@ -2032,7 +1506,6 @@ body.login-page::after {
   gap: 12px;
 }
 
-/* Individual footer link styling with gradient hover effect */
 .footer-links a {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.65);
@@ -2041,13 +1514,11 @@ body.login-page::after {
   padding-left: 0;
 }
 
-/* Footer link hover state with gradient text and icon */
 .footer-links a:hover {
   color: var(--secondary-color);
   padding-left: 6px;
 }
 
-/* Gradient divider line between main content and bottom footer */
 .footer-divider {
   height: 1px;
   background: linear-gradient(
@@ -2061,7 +1532,6 @@ body.login-page::after {
   margin: 40px 0;
 }
 
-/* Bottom footer section with copyright and credit */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -2071,13 +1541,11 @@ body.login-page::after {
   padding-top: 20px;
 }
 
-/* Copyright text styling */
 .footer-copyright {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Credit/tagline text styling with gradient effect */
 .footer-credit {
   font-size: 13px;
   background: var(--gradient-color);
@@ -2088,95 +1556,297 @@ body.login-page::after {
   font-weight: 600;
 }
 
-/* Responsive design for tablets and below */
+/* =============================================
+   12. RESPONSIVE — All contributors (consolidated)
+   All responsive rules live here in media queries.
+   ============================================= */
+
+/* --- Large Desktops (max-width: 1279px) --- */
+@media (max-width: 1279px) {
+  nav ul {
+    gap: 20px 15px;
+  }
+}
+
+/* --- Tablets Landscape (max-width: 1023px) --- */
+@media (max-width: 1023px) {
+  /* Hero — Moisha */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left {
+    max-width: 100%;
+  }
+  .hero-description {
+    max-width: 100%;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-right {
+    flex: unset;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* Navbar mobile mode — Ruth */
+  .mobile-menu .menu {
+    display: flex;
+  }
+  nav ul {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    background-color: rgb(0 0 0 / 65%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    width: 100%;
+    z-index: 400;
+    gap: 10px;
+    border-radius: 0 0 20px 20px;
+  }
+  #menu-toggle:checked ~ ul {
+    left: 0;
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul a {
+    color: #fff;
+    width: 90%;
+    max-width: 300px;
+    display: block;
+    padding: 10px 15px;
+    margin-left: 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+  }
+  nav ul a:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+  }
+  nav ul .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav ul .nav-buttons a {
+    margin-left: 15px;
+    padding-left: 15px;
+    background-color: var(--secondary-color);
+  }
+
+  /* Lectures hero buttons — Milly */
+  .lectures-hero-buttons {
+    gap: 10px;
+  }
+}
+
+/* --- Tablets Portrait (max-width: 768px) --- */
 @media (max-width: 768px) {
+  /* Lectures section — Hillary */
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .lectures {
+    grid-template-columns: 1fr;
+  }
+
+  /* Results — Swabulah */
+  .results-summary {
+    flex-direction: column;
+    align-items: center;
+  }
+  .results-semesters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Footer — Natasha */
   .footer {
     padding: 50px 20px 25px;
     margin-top: 60px;
   }
-
   .footer-gradient-blob--blue {
     width: 300px;
     height: 300px;
     top: -80px;
     right: -60px;
   }
-
   .footer-gradient-blob--green {
     width: 250px;
     height: 250px;
     bottom: -40px;
     left: -80px;
   }
-
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-
   .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-brand {
     grid-column: 1 / -1;
   }
 }
 
-/* Responsive design for mobile devices */
+/* --- Communication Tablets (max-width: 767px) — Suban */
+@media (max-width: 767px) {
+  .comm-hero {
+    min-height: 40vh;
+    padding: 60px 20px 40px;
+  }
+  .comm-card-body {
+    padding: 18px 20px;
+  }
+  .comm-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* --- Login & Register Responsive --- */
+@media (max-width: 768px) {
+  .login-section {
+    padding: 100px 16px 30px;
+  }
+  .register-page .login-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 520px) {
+  .login-field-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .login-card {
+    padding: 28px 20px 24px;
+    border-radius: 16px;
+  }
+  .register-page .login-card {
+    max-width: 100%;
+  }
+  .login-title {
+    font-size: 20px;
+  }
+  .login-subtitle {
+    font-size: 12.5px;
+    margin-bottom: 16px;
+  }
+  .login-form {
+    gap: 12px;
+  }
+  .login-label {
+    font-size: 13px;
+  }
+  .login-input {
+    padding: 9px 14px 9px 38px;
+    font-size: 13px;
+    border-radius: 8px;
+  }
+  .login-submit {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+  .login-create-account {
+    padding: 10px 20px;
+    font-size: 13.5px;
+  }
+  .login-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .login-icon-wrap {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-card {
+    padding: 24px 16px 20px;
+  }
+  .login-title {
+    font-size: 18px;
+  }
+  .login-input {
+    font-size: 12.5px;
+  }
+}
+
+/* --- Mobile (max-width: 480px) --- */
 @media (max-width: 480px) {
+  /* Navbar — Ruth */
+  nav .logo {
+    font-size: 10px;
+  }
+  nav .logo span {
+    font-size: 39px;
+  }
+
+  /* Communication Cards — Suban */
+  .comm-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Footer — Natasha */
   .footer {
     padding: 40px 15px 20px;
     margin-top: 40px;
   }
-
   .footer-gradient-blob--blue {
     width: 250px;
     height: 250px;
     top: -60px;
     right: -50px;
   }
-
   .footer-gradient-blob--green {
     width: 200px;
     height: 200px;
     bottom: -30px;
     left: -70px;
   }
-
   .footer-content {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-
   .footer-socials {
     gap: 10px;
   }
-
   .social-link {
     width: 36px;
     height: 36px;
     font-size: 14px;
   }
-
   .footer-heading {
     font-size: 13px;
   }
-
   .footer-links a {
     font-size: 13px;
   }
-
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 12px;
   }
-
   .footer-copyright,
   .footer-credit {
     font-size: 12px;
   }
 }
->>>>>>> Stashed changes
