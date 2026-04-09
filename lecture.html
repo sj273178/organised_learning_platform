@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,114 +6,79 @@
     <title>Lecture Materials Dashboard</title>
     <style>
         :root {
-            --bg-dark: #0a0b1e;
-            --hero-gradient: radial-gradient(circle at center, #1e1b4b 0%, #0a0b1e 100%);
-            --accent-green: #22c55e;
-            --text-white: #ffffff;
-            --text-muted: #94a3b8;
-            --card-bg: #ffffff;
+            --bg-dark: #070912;
+            --bg-gradient: radial-gradient(circle at center, #1a1e3d 0%, #070912 100%);
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent-green: #2ecc71;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
             --y1: #3b82f6; --y2: #10b981; --y3: #8b5cf6;
         }
 
-        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f8fafc; margin: 0; color: #1e293b; line-height: 1.6; }
+        * { box-sizing: border-box; transition: all 0.3s ease; }
 
- 
-        .hero {
-            background: var(--hero-gradient);
-            color: var(--text-white);
-            text-align: center;
-            padding: 80px 20px 120px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        .year-badge {
-            border: 1px solid rgba(34, 197, 94, 0.4);
-            color: var(--accent-green);
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            margin-bottom: 25px;
-            background: rgba(34, 197, 94, 0.05);
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 40px 20px; text-align: center; }
+
+        
+        .academic-year {
+            display: inline-block; border: 1px solid rgba(46, 204, 113, 0.3);
+            color: var(--accent-green); padding: 6px 20px; border-radius: 50px;
+            font-size: 13px; letter-spacing: 0.5px; margin-bottom: 30px;
+            background: rgba(46, 204, 113, 0.05);
         }
 
-        .hero-title {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 2.8rem;
-            font-weight: 800;
-            margin: 0 0 20px;
-        }
+        h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); margin: 0 0 20px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 15px; }
 
-        .hero-subtitle {
-            max-width: 700px;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            max-width: 900px;
-        }
-
-        .filter-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-white);
-            padding: 10px 24px;
-            border-radius: 50px;
-            font-size: 0.95rem;
-            text-decoration: none;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: 0.3s;
-        }
-
-        .filter-btn.active {
-            background: var(--accent-green);
-            border-color: var(--accent-green);
-            color: #000;
-            font-weight: 600;
-        }
-
-     .filter-btn:hover {
-    background-color: var(--accent-green);
-    color: #000; 
-    border-color: var(--accent-green);
-}
+        .subtitle { color: var(--text-dim); font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 50px; }
 
      
-        .container { max-width: 1200px; margin: -60px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
-       
+        .category-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+
+        .category-card {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            padding: 14px 28px; border-radius: 100px; cursor: pointer;
+            display: flex; align-items: center; gap: 12px;
+            font-size: 1rem; color: white; backdrop-filter: blur(10px);
+        }
+
+        .category-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.3); }
+
+  
+        #course-view { display: none; opacity: 0; transform: scale(0.95); text-align: left; }
+
+        .back-btn { background: none; border: 1px solid var(--text-dim); color: var(--text-dim); padding: 8px 20px; border-radius: 50px; cursor: pointer; margin-bottom: 30px; }
+        .back-btn:hover { color: white; border-color: white; }
+
         .year-header {
             color: white; padding: 15px 25px; border-radius: 12px;
-            font-weight: 800; font-size: 1.4rem; margin-top: 80px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            font-weight: 800; font-size: 1.4rem; margin-top: 50px;
+            display: flex; align-items: center; gap: 10px;
         }
 
-        .sem-label {
-            margin: 50px 0 25px; font-weight: 800; color: #64748b;
-            font-size: 1.2rem; border-left: 4px solid #cbd5e1; padding-left: 15px;
-        }
+        .sem-label { margin: 40px 0 20px; font-weight: 800; color: var(--text-dim); font-size: 1.2rem; border-left: 4px solid var(--glass-border); padding-left: 15px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
 
         .card {
             background: white; border: 1px solid #e2e8f0; border-radius: 16px;
             padding: 24px; position: relative; overflow: hidden;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); color: #1e293b;
         }
 
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
         .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; }
-
+        
         .b-blue::before { background: var(--y1); }
         .b-green::before { background: var(--y2); }
         .b-purple::before { background: var(--y3); }
@@ -122,57 +87,49 @@
         .name { font-size: 1.15rem; font-weight: 800; margin: 10px 0 20px; height: 2.8em; display: flex; align-items: center; }
         .meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: #64748b; margin-bottom: 25px; }
 
-        .btn-open {
-            display: block; width: 100%; background: #111827; color: white;
-            text-align: center; padding: 12px; border-radius: 10px;
-            text-decoration: none; font-weight: 600; font-size: 0.9rem;
-        }
+        .btn-open { display: block; width: 100%; background: #111827; color: white; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 
+       
+        .hidden { display: none !important; }
+        .visible { display: block !important; opacity: 1 !important; transform: scale(1) !important; }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <div class="year-badge">Academic Year 2025/2026</div>
-      <h1 class="hero-title">
-    📖 Lecture Materials
-</h1>
-        <p class="hero-subtitle">Browse all course content organised by year, semester, and unit. Select a course below to get started.</p>
-       
-        <div class="filter-group">
-            <a href="#" class="filter-btn"><span>&lt;/&gt;</span> Science & Technology</a>
-            <a href="#" class="filter-btn"><span>∑</span> Business & Management</a>
-            <a href="#" class="filter-btn"><span>💼</span> Law</a>
-            <a href="#" class="filter-btn"><span>⚖️</span>Socio-Economic Sciences</a>
-            <a href="#" class="filter-btn"><span>🛰️</span> Postgraduate Studies</a>
-            <a href="#" class="filter-btn"><span>💡</span> Short Courses</a>
+<div class="container">
+    
+    <div id="main-menu">
+        <div class="academic-year">Academic Year 2025/2026</div>
+        <h1>📖 Lecture Materials</h1>
+        <p class="subtitle">Organised by year, semester, and unit. Select a category below.</p>
+
+        <div class="category-grid">
+            <div class="category-card" onclick="openCourse('Science & Technology')"><span>&lt;/&gt;</span> Science & Technology</div>
+            <div class="category-card" onclick="openCourse('Business & Management')"><span>Σ</span> Business & Management</div>
+            <div class="category-card" onclick="openCourse('Law')"><span>💼</span> Law</div>
+            <div class="category-card" onclick="openCourse('Socio-Economic Sciences')"><span>⚖️</span> Socio-Economic Sciences</div>
+            <div class="category-card" onclick="openCourse('Postgraduate Studies')"><span>🎓</span> Postgraduate Studies</div>
+            <div class="category-card" onclick="openCourse('Short Courses')"><span>💡</span> Short Courses</div>
         </div>
-    </header>
+    </div>
 
-    <div class="container">
-
-       
-        <section id="y1">
-            <div class="year-header" style="background: var(--y1); display: flex; align-items: center; gap: 8px; padding: 10px; color: white; font-family: sans-serif; font-weight: bold;">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-  </svg>
-  
-  <span>Year 1</span>
-</div>
-           
+    <div id="course-view">
+        <button class="back-btn" onclick="closeCourse()">← Back to Categories</button>
+        <h1 id="course-title" style="justify-content: flex-start;">Course Title</h1>
+        
+   
+        <section>
+            <div class="year-header" style="background: var(--y1);">Year 1</div>
             <div class="sem-label">Semester 1</div>
             <div class="grid">
                 <div class="card b-blue"><div class="code">CS1101</div><div class="name">Introduction to Algorithms</div><div class="meta"><span>👤 Dr. Smith</span><span>📁 12 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-green"><div class="code">CS1102</div><div class="name">Discrete Structures</div><div class="meta"><span>👤 Prof. Brown</span><span>📁 15 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-purple"><div class="code">CS1103</div><div class="name">Digital Logic Design</div><div class="meta"><span>👤 Dr. White</span><span>📁 10 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-blue"><div class="code">CS1104</div><div class="name">Professional Communications</div><div class="meta"><span>👤 Ms. Green</span><span>📁 8 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
-                <div class="card b-green"><div class="code">CS1105</div><div class="name">Web Development I</div><div class="info">👤 Prof. Lee • 📁 22 Files</div><a href="#" class="btn-open">Open Materials</a></div>
+                <div class="card b-green"><div class="code">CS1105</div><div class="name">Web Development I</div><div class="meta"><span>👤 Prof. Lee</span><span>📁 22 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-purple"><div class="code">CS1106</div><div class="name">Computing Fundamentals</div><div class="meta"><span>👤 Dr. Grey</span><span>📁 14 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-blue"><div class="code">CS1107</div><div class="name">Calculus for Computing</div><div class="meta"><span>👤 Prof. Nash</span><span>📁 9 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
             </div>
-
             <div class="sem-label">Semester 2</div>
             <div class="grid">
                 <div class="card b-green"><div class="code">CS1201</div><div class="name">Data Structures</div><div class="meta"><span>👤 Dr. Smith</span><span>📁 20 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
@@ -185,18 +142,9 @@
             </div>
         </section>
 
- 
-        <section id="y2">
-            <div class="year-header" style="background: var(--y1); display: flex; align-items: center; gap: 8px; padding: 10px; color: white; font-family: sans-serif; font-weight: bold;">
-  <!-- Graduation Cap Icon -->
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-  </svg>
   
-  <span>Year 2</span>
-</div>
-           
+        <section>
+            <div class="year-header" style="background: var(--y2);">Year 2</div>
             <div class="sem-label">Semester 1</div>
             <div class="grid">
                 <div class="card b-purple"><div class="code">CS2101</div><div class="name">Advanced Algorithms</div><div class="meta"><span>👤 Dr. Fast</span><span>📁 14 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
@@ -207,7 +155,6 @@
                 <div class="card b-green"><div class="code">CS2106</div><div class="name">Theory of Computation</div><div class="meta"><span>👤 Dr. Turing</span><span>📁 12 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-purple"><div class="code">CS2107</div><div class="name">Project Management</div><div class="meta"><span>👤 Prof. Gantt</span><span>📁 15 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
             </div>
-
             <div class="sem-label">Semester 2</div>
             <div class="grid">
                 <div class="card b-blue"><div class="code">CS2201</div><div class="name">Artificial Intelligence</div><div class="meta"><span>👤 Dr. Bot</span><span>📁 30 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
@@ -220,18 +167,9 @@
             </div>
         </section>
 
-       
-        <section id="y3">
-       <div class="year-header" style="background: var(--y1); display: flex; align-items: center; gap: 8px; padding: 10px; color: white; font-family: sans-serif; font-weight: bold;">
-  <!-- Graduation Cap Icon -->
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
-    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
-  </svg>
-  
-  <span>Year 3</span>
-</div>
-           
+    
+        <section>
+            <div class="year-header" style="background: var(--y3);">Year 3</div>
             <div class="sem-label">Semester 1</div>
             <div class="grid">
                 <div class="card b-green"><div class="code">CS3101</div><div class="name">Machine Learning</div><div class="meta"><span>👤 Dr. Neural</span><span>📁 28 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
@@ -242,7 +180,6 @@
                 <div class="card b-blue"><div class="code">CS3106</div><div class="name">Ethics & Law in ICT</div><div class="meta"><span>👤 Prof. Right</span><span>📁 6 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
                 <div class="card b-green"><div class="code">CS3107</div><div class="name">Capstone Project I</div><div class="meta"><span>👤 Dr. Mentor</span><span>📁 5 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
             </div>
-
             <div class="sem-label">Semester 2</div>
             <div class="grid">
                 <div class="card b-purple"><div class="code">CS3201</div><div class="name">Deep Learning</div><div class="meta"><span>👤 Dr. Layer</span><span>📁 35 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
@@ -254,8 +191,23 @@
                 <div class="card b-purple"><div class="code">CS3207</div><div class="name">Internship Practice</div><div class="meta"><span>👤 Prof. Work</span><span>📁 4 Files</span></div><a href="#" class="btn-open">Open Materials</a></div>
             </div>
         </section>
-
     </div>
+</div>
+
+<script>
+    function openCourse(courseName) {
+        document.getElementById('main-menu').classList.add('hidden');
+        document.getElementById('course-title').innerText = courseName;
+        document.getElementById('course-view').classList.add('visible');
+        window.scrollTo(0, 0);
+    }
+
+    function closeCourse() {
+        document.getElementById('course-view').classList.remove('visible');
+        document.getElementById('main-menu').classList.remove('hidden');
+        window.scrollTo(0, 0);
+    }
+</script>
 
 </body>
 </html>
