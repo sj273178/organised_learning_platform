@@ -658,6 +658,180 @@ nav ul a:hover {
 }
 
 /* =============================================
+   6b. LECTURE CARDS — Lectures Page
+   Reuses: .comm-card hover, .comm-tag pattern, .primary-button
+   ============================================= */
+.lecture-cards-section {
+  background: #f8f9fa;
+  padding: 60px 20px 80px;
+}
+
+.lecture-cards-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--base-color);
+  margin-bottom: 6px;
+}
+
+.lecture-cards-subheading {
+  font-size: 15px;
+  color: var(--base-color-light);
+  margin-bottom: 36px;
+}
+
+.lecture-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* Individual card — mirrors .comm-card structure */
+.lec-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.lec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.lec-card-accent {
+  height: 4px;
+}
+
+.lec-card-accent-green {
+  background: linear-gradient(90deg, #2ecc71, #34d399);
+}
+
+.lec-card-body {
+  padding: 24px 28px;
+}
+
+.lec-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Tags — reuses .comm-tag sizing & colour pattern */
+.lec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.lec-tag .material-symbols-outlined {
+  font-size: 15px;
+}
+
+.lec-tag-live {
+  background: rgba(46, 204, 113, 0.12);
+  color: var(--secondary-color);
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.lec-tag-scheduled {
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--secondary-color);
+}
+
+.lec-schedule {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #888;
+}
+
+.lec-schedule .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.lec-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--base-color);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.lec-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.lec-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--base-color-light);
+}
+
+.lec-detail .material-symbols-outlined {
+  font-size: 20px;
+  color: #999;
+}
+
+/* Google Meet button — extends .primary-button style */
+.lec-meet-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: var(--base-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 30px;
+  border: 1.5px solid var(--base-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lec-meet-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.lec-meet-btn .material-symbols-outlined {
+  font-size: 18px;
+  transition: transform 0.25s ease;
+}
+
+.lec-meet-btn:hover .material-symbols-outlined {
+  transform: translateX(4px);
+}
+
+/* =============================================
    7. PAGE BACKGROUND — Jeslor Ssozi
    Reusable dark bg with animated gradient orbs
    ============================================= */
@@ -1653,6 +1827,14 @@ body.results-page {
 
 /* --- Tablets Portrait (max-width: 768px) --- */
 @media (max-width: 768px) {
+  /* Lecture cards — Lectures page */
+  .lecture-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .lecture-cards-section {
+    padding: 40px 16px 60px;
+  }
+
   /* Lectures section — Hillary */
   .layout {
     grid-template-columns: 1fr;
@@ -1791,6 +1973,21 @@ body.results-page {
 
 /* --- Mobile (max-width: 480px) --- */
 @media (max-width: 480px) {
+  /* Lecture cards */
+  .lecture-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .lec-card-body {
+    padding: 18px 20px;
+  }
+  .lec-card-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .lecture-cards-heading {
+    font-size: 22px;
+  }
+
   /* Navbar — Ruth */
   nav .logo {
     font-size: 10px;
