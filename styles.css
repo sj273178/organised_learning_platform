@@ -57,12 +57,12 @@ a {
 }
 
 /* =============================================
-   2. BUTTONS — Esther Musiime
+ +  2. BUTTONS — Esther Musiime
    ============================================= */
 .primary-button {
   background-color: var(--base-color);
   color: #fff;
-  padding: 10px 30px;
+  padding: 12px 30px;
   font-weight: 600;
   border-radius: 30px;
   border: none;
@@ -71,8 +71,8 @@ a {
   display: inline-block;
   transition: all 0.3s ease;
   border: 1.5px solid var(--base-color);
-  box-shadow: 0 4px 20px rgb(172 168 168 / 36%);
-border: 1.5px solid var(--secondary-color);
+  box-shadow: 0 8px 25px rgb(172 168 168 / 36%);
+  border: 1.5px solid var(--secondary-color);
 }
 
 .primary-button:hover {
