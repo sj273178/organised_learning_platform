@@ -72,7 +72,7 @@ a {
   transition: all 0.3s ease;
   border: 1.5px solid var(--base-color);
   box-shadow: 0 4px 20px rgb(172 168 168 / 36%);
-
+border: 1.5px solid var(--secondary-color);
 }
 
 .primary-button:hover {
@@ -94,6 +94,8 @@ a {
   background: transparent;
   display: inline-block;
   transition: all 0.3s ease;
+  
+  
 }
 
 .outline-button:hover {
