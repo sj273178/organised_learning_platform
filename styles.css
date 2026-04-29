@@ -71,6 +71,9 @@ a {
   display: inline-block;
   transition: all 0.3s ease;
   border: 1.5px solid var(--base-color);
+  box-shadow: 0 4px 20px rgb(172 168 168 / 36%);
+  border-color: var(--secondary-color);
+
 }
 
 .primary-button:hover {
@@ -78,7 +81,7 @@ a {
   color: #fff;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
-  border-color: var(--secondary-color);
+
 }
 
 .outline-button {
@@ -95,9 +98,11 @@ a {
 }
 
 .outline-button:hover {
-  background: var(--gradient-color);
+  background: var(--secondary-color);
   transform: translateY(-4px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+
 }
 
 /* =============================================
@@ -1851,3 +1856,4 @@ body.results-page {
     font-size: 12px;
   }
 }
++
