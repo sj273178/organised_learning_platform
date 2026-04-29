@@ -72,7 +72,6 @@ a {
   transition: all 0.3s ease;
   border: 1.5px solid var(--base-color);
   box-shadow: 0 4px 20px rgb(172 168 168 / 36%);
-  border-color: var(--secondary-color);
 
 }
 
