@@ -954,10 +954,10 @@ body.login-page::after {
   height: 4px;
 }
 
-.comm-card-accent--red {
-  background: linear-gradient(90deg, #ef4444, #f87171);
+.comm-card-accent--red, .comm-card-accent--blue, .comm-card-accent--green, .comm-card-accent--purple, .comm-card-accent--orange, .comm-card-accent--teal {
+  background: var (--primary-color);
 }
-.comm-card-accent--blue {
+/*.comm-card-accent--blue {
   background: linear-gradient(90deg, #3498db, #60a5fa);
 }
 .comm-card-accent--green {
@@ -972,6 +972,7 @@ body.login-page::after {
 .comm-card-accent--teal {
   background: linear-gradient(90deg, #1abc9c, #2dd4bf);
 }
+*/
 
 /* Card body */
 .comm-card-body {
