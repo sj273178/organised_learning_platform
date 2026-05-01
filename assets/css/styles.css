@@ -122,6 +122,10 @@ nav {
   z-index: 9999;
 }
 
+.nav-scrolled{
+  max-width: 1090px;
+}
+
 nav .container {
   display: flex;
   justify-content: space-between;
