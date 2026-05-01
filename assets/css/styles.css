@@ -124,6 +124,9 @@ nav {
 
 .nav-scrolled{
   max-width: 1090px;
+  border-radius: 50px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 nav .container {
