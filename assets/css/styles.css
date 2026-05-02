@@ -1337,16 +1337,7 @@ gpa-card i {
   justify-content: space-between;
   font-weight: 600;
   font-size: 15px;
-}
-
-.sem-blue {
-  background: linear-gradient(135deg, #3b82f6, #38bdf8);
-}
-.sem-green {
-  background: linear-gradient(135deg, #22c55e, #4ade80);
-}
-.sem-purple {
-  background: linear-gradient(135deg, #9333ea, #c084fc);
+  background-color: var(--base-color);
 }
 
 .result-course {
