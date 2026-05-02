@@ -113,9 +113,18 @@ nav {
   background-color: #fff;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   width: 100%;
   z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.nav-scrolled{
+  max-width: 1090px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 nav .container {
