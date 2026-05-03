@@ -18,6 +18,10 @@
 /* =============================================
    1. ROOT VARIABLES & CODE REFACTOR — Jeslor Ssozi
    ============================================= */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 :root {
   --base-color: #000000;
   --base-color-light: #424242;
@@ -1318,11 +1322,11 @@ gpa-card i {
 
 .result-sem-card {
   background: white;
-
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .result-sem-card:hover {
@@ -1962,10 +1966,11 @@ gpa-card i {
     grid-template-columns: 1fr;
   }
 
-  /* Results — Swabulah */
+  /* Results — Jeslor */
   .results-summary {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   .results-semesters {
     flex-direction: column;
