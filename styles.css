@@ -365,7 +365,7 @@ nav ul a:hover {
   border-radius: 16px 0 0 16px;
 }
 
-.hero-card-border--blue {
+.hero-card-border--green {
   background: var(--primary-color);
 }
 .hero-card-border--green {
@@ -386,13 +386,13 @@ nav ul a:hover {
   font-size: 26px;
 }
 
-.hero-card-icon-box--blue {
+.hero-card-icon-box--green {
   background: #1a2a3a;
 }
 .hero-card-icon-box--green {
   background: #1a2e20;
 }
-.hero-card-icon-box--purple {
+.hero-card-icon-box--green {
   background: #1e1a30;
 }
 
