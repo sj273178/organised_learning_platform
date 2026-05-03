@@ -1969,7 +1969,6 @@ gpa-card i {
   /* Results — Jeslor */
   .results-summary {
     display: grid;
-
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   .results-semesters {
