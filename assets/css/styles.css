@@ -1247,7 +1247,7 @@ body.results-page {
   gap: 25px;
   padding: 30px;
   flex-wrap: wrap;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 
 .result-card {
